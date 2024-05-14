@@ -1,0 +1,5 @@
+if(${CONFIG_OS_OPTION_SMP})
+    add_subdirectory(smp)
+else()
+    add_subdirectory(amp)
+endif()
