@@ -23,7 +23,7 @@
 /* Milk-V Duo */
 #include "milkv_duo_io.h"
 
-// #define __DEBUG__
+//#define __DEBUG__
 #ifdef __DEBUG__
 #define debug_printf printf
 #else
@@ -73,6 +73,8 @@ TASK_CTX_S gTaskCtx[2] = {
 
 };
 
+static cmdqu_t rtos_cmdq_cp;
+
 /* mailbox parameters */
 volatile struct mailbox_set_register *mbox_reg;
 volatile struct mailbox_done_register *mbox_done_reg;
@@ -85,8 +87,8 @@ DEFINE_CVI_SPINLOCK(mailbox_lock, SPIN_MBOX);
 
 void main_create_tasks(void)
 {
-	u8 i = 0;
-	for (; i < ARRAY_SIZE(gTaskCtx); i++) {
+	U8 i = 0;
+	for (; i < 2; i++) {
 		U32 ret, ret_mtx;
 		struct TskInitParam param;
 		param.taskEntry = gTaskCtx[i].run_task;
@@ -94,6 +96,10 @@ void main_create_tasks(void)
 		param.stackSize = gTaskCtx[i].stack_size;
 		param.name = (char*)gTaskCtx[i].name;
 		param.stackAddr = 0;
+		param.args[0] = (gTaskCtx[i].task_param)[0];
+		param.args[1] = (gTaskCtx[i].task_param)[1];
+		param.args[2] = (gTaskCtx[i].task_param)[2];
+		param.args[3] = (gTaskCtx[i].task_param)[3];
 		ret = PRT_TaskCreate(&(gTaskCtx[i].task_pid), &param);
 		ret_mtx = PRT_SemCreate(0, &(gTaskCtx[i].sleep_mutex));
 		if(ret != OS_OK || ret_mtx != OS_OK) {
@@ -103,6 +109,8 @@ void main_create_tasks(void)
 				asm volatile("wfi");
 			}
 		}
+                printf("gTaskCtx[%d].task_pid : %d\n",i, gTaskCtx[i].task_pid);
+		printf("gTaskCtx[%d].sleep_mutex : %d\n",i, gTaskCtx[i].sleep_mutex);
 		PRT_TaskResume(gTaskCtx[i].task_pid);
 	}
 }
@@ -137,13 +145,14 @@ void main_cvirtos(void)
 			asm volatile("wfi");
 		}
 	}
+	printf("gTaskCtx[0].task_pid : %d \n",gTaskCtx[0].task_pid);
+	printf("gTaskCtx[0].sleep_mutex : %d \n",gTaskCtx[0].sleep_mutex);
 	main_create_tasks();
     	printf("cvi task end\n");
 }
 
 void prvCmdQuRunTask(uintptr_t param_1, uintptr_t param_2, uintptr_t param_3, uintptr_t param_4)
 {
-	TASK_CTX_S* g_ctx = (TASK_CTX_S*)param_1;
 	cmdqu_t rtos_cmdq;
 	cmdqu_t *cmdq;
 	cmdqu_t *rtos_cmdqu_t;
@@ -165,7 +174,8 @@ void prvCmdQuRunTask(uintptr_t param_1, uintptr_t param_2, uintptr_t param_3, ui
 	printf("prvCmdQuRunTask run\n");
 
 	for (;;) {
-		PRT_SemPend(g_ctx->sleep_mutex,OS_WAIT_FOREVER);
+		PRT_SemPend(gTaskCtx[0].sleep_mutex,OS_WAIT_FOREVER);
+		memcpy((void *)(&rtos_cmdq),(const void*)(&rtos_cmdq_cp),sizeof(rtos_cmdq_cp));
 		printf("get mutex prvCmd!\n");
 		switch (rtos_cmdq.cmd_id) {
 			case CMD_TEST_A:
@@ -303,7 +313,7 @@ void prvQueueISR(HwiArg intr_number)
 					debug_printf("cmdq->block =%x\n", rtos_cmdq.block);
 					debug_printf("cmdq->linux_valid =%d\n", rtos_cmdq.resv.valid.linux_valid);
 					debug_printf("cmdq->rtos_valid =%x\n", rtos_cmdq.resv.valid.rtos_valid);
-
+					memcpy((void*)(&rtos_cmdq_cp),(const void*)(&rtos_cmdq),sizeof(rtos_cmdq));
 					PRT_SemPost(gTaskCtx[0].sleep_mutex);
 				} else
 					printf("rtos cmdq is not valid %d, ip=%d , cmd=%d\n",

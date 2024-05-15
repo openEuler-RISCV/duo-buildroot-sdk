@@ -1,4 +1,5 @@
-#include <stdio.h>
+//#include <stdio.h>
+#include <prt_typedef.h>
 /*
  * The blue LED on Duo is GPIOC24.
  * The datasheet page 536 says:
