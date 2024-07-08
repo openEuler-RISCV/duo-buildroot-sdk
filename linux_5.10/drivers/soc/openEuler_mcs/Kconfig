@@ -1,0 +1,14 @@
+
+menu "openEuler_mcs"
+
+config MCS
+	tristate "mcs_dev"
+	default m
+	depends on MCS_MAILBOX
+	help	
+	  openEuler mcs device for milkv-duo, will create a device file "/dev/mcs" for mcs user program,
+	  support the kernel module for mcs in milkv-duo
+
+source "drivers/soc/openEuler_mcs/mcs_cmdqu/Kconfig"
+
+endmenu 

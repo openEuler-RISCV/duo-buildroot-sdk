@@ -1,5 +1,0 @@
-add_subdirectory(ipc)
-add_subdirectory(kernel)
-if(${CONFIG_OS_OPTION_DYNAMIC_MODULE})
-add_subdirectory(extend)
-endif()

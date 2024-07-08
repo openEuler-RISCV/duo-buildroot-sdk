@@ -1,10 +1,6 @@
 #ifndef __RTOS_COMMAND_QUEUE__
 #define __RTOS_COMMAND_QUEUE__
 
-#include <linux/kernel.h>
-
-#define NR_SYSTEM_CMD           20
-
 struct valid_t {
 	unsigned char linux_valid;
 	unsigned char rtos_valid;
@@ -25,20 +21,23 @@ struct cmdqu_t {
 	unsigned int  param_ptr;
 } __attribute__((packed)) __attribute__((aligned(0x8)));
 
+#define MAX_CMD_NUM	 128
 /* keep those commands for ioctl system used */
+/* cmd type don't more than 128!!!!!*/
 enum SYSTEM_CMD_TYPE {
-	CMDQU_SEND = 1,
-	CMDQU_SEND_WAIT,
-	CMDQU_SEND_WAKEUP,
-	CMDQU_SYSTEM_LIMIT = NR_SYSTEM_CMD,
+	CMDQU_SEND_TEST 	= 0	,
+	CMDQU_DUO_TEST			,
+	CMDQU_MCS_BOOT			,
+	CMDQU_SYSTEM_BUTT		,
 };
 
-#define RTOS_CMDQU_DEV_NAME "cvi-rtos-cmdqu"
-#define RTOS_CMDQU_SEND                         _IOW('r', CMDQU_SEND, unsigned long)
-#define RTOS_CMDQU_SEND_WAIT                    _IOW('r', CMDQU_SEND_WAIT, unsigned long)
-#define RTOS_CMDQU_SEND_WAKEUP                  _IOW('r', CMDQU_SEND_WAKEUP, unsigned long)
+typedef int (*cmdqu_irq_handler)(cmdqu_t* cmdq, void* data);
+int rtos_cmdqu_send(cmdqu_t* cmdq);
+int request_cmdqu_irq(enum SYSTEM_CMD_TYPE, cmdqu_irq_handler cmdqu_irq_func, void* data);
 
-int rtos_cmdqu_send(cmdqu_t *cmdq);
-int rtos_cmdqu_send_wait(cmdqu_t *cmdq, int wait_cmd_id);
+void rtos_cmdqu_init(void);
+
+
+
 
 #endif  // end of __RTOS_COMMAND_QUEUE__

@@ -30,3 +30,4 @@ obj-y				+= xilinx/
 obj-$(CONFIG_ARCH_ZX)		+= zte/
 obj-$(CONFIG_SOC_KENDRYTE)	+= kendryte/
 obj-$(CONFIG_ARCH_CVITEK)   += cvitek/
+obj-y			   	+= openEuler_mcs/

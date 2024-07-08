@@ -24,5 +24,6 @@ source "drivers/soc/xilinx/Kconfig"
 source "drivers/soc/zte/Kconfig"
 source "drivers/soc/kendryte/Kconfig"
 source "drivers/soc/cvitek/Kconfig"
+source "drivers/soc/openEuler_mcs/Kconfig"
 
 endmenu

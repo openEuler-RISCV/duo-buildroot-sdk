@@ -1,0 +1,7 @@
+config MCS_MAILBOX
+	bool "mcs mailbox dirver"
+	default y
+	depends on !CVI_MAILBOX
+	help
+	  mcs mailbox driver, support api for interrupt rtos core and handle the interrupt from rtos,
+	  it is almost change from CVI_MAILBOX driver, just a extend

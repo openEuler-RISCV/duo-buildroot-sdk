@@ -1,1 +1,0 @@
-add_library_ex(prt_signal.c)

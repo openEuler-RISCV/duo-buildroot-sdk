@@ -1,4 +1,0 @@
-config OS_OPTION_QUEUE
-	bool "Whether support normal queue module or not"
-	default n
-

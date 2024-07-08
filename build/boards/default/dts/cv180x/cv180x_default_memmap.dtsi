@@ -22,4 +22,25 @@
 			size = <0x0 CVIMMAP_ION_SIZE>;
 		};
 	};
+	reserved-memory {
+	            #address-cells = <0x02>;
+	            #size-cells = <0x02>;
+	            ranges;	
+	            client_os_reserved: client_os_reserved@83000000 {
+	                reg = <0x00 0x83000000 0x00 0x100000>;
+	                no-map;
+	            };
+	
+	            client_os_dma_memory_region: client_os-dma-memory@83100000 {
+	                compatible = "shared-dma-pool";
+	                reg = <0x00 0x83100000 0x00 0x40000>;
+	                no-map;
+	            };
+	 };
+	
+	mcs-remoteproc {
+	            compatible = "oe,mcs_remoteproc";
+	            memory-region = <&client_os_dma_memory_region>,
+	                            <&client_os_reserved>;
+	};
 };

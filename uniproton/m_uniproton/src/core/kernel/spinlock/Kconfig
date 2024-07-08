@@ -1,3 +1,0 @@
-config INTERNAL_OS_SPIN_LOCK
-    bool "whether enables spinlock feature"
-    default y

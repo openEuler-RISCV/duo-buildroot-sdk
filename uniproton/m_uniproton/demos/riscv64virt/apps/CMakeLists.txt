@@ -1,5 +1,0 @@
-if (APP STREQUAL "hello_world")
-	add_subdirectory(hello_world)
-else()
-	message("no such app")
-endif()
