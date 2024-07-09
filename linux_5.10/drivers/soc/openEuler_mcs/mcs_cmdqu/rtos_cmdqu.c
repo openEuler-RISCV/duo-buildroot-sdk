@@ -238,6 +238,7 @@ long rtos_cmdqu_init(void)
 
 	return ret;
 }
+EXPORT_SYMBOL(request_cmdqu_irq);
 
 long rtos_cmdqu_deinit(void)
 {
