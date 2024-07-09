@@ -58,25 +58,20 @@ int rtos_cmdqu_send(cmdqu_t* cmdq)
 	int mb_flags;
 	cmdqu_t *rtos_cmdqu_t;
 
-	printf("cmdqu send start! ");
-	printf("ip_id=%d cmd_id=%d param_ptr=%x\n", cmdq->ip_id, cmdq->cmd_id, (unsigned int)cmdq->param_ptr);
+	printf("cmdqu send start!\n");
 
 	drv_spin_lock_irqsave(&mailbox_lock, mb_flags);
-	if (mb_flags == MAILBOX_LOCK_FAILED) {
+	if (mb_flags == MAILBOX_LOCK_FAILED) 
+	{
 		printf("cmdqu send error : ip_id=%d cmd_id=%d param_ptr=%x\n", cmdq->ip_id, cmdq->cmd_id, (unsigned int)cmdq->param_ptr);
 		return -1;
 	}
 
 	rtos_cmdqu_t = (cmdqu_t *) mailbox_context;
-	printf("mailbox_context = %p\n", mailbox_context);
-	printf("rtos_cmdqu_t = %p\n", rtos_cmdqu_t);
-	printf("cmdq->ip_id = %d\n", cmdq->ip_id);
-	printf("cmdq->cmd_id = %d\n", cmdq->cmd_id);
-	printf("cmdq->block = %d\n", cmdq->block);
-	printf("cmdq->para_ptr = %d\n", cmdq->param_ptr);
-
-	for (valid = 0; valid < MAILBOX_MAX_NUM; valid++) {
-		if (rtos_cmdqu_t->resv.valid.linux_valid == 0 && rtos_cmdqu_t->resv.valid.rtos_valid == 0) {
+	for (valid = 0; valid < MAILBOX_MAX_NUM; valid++) 
+	{
+		if (rtos_cmdqu_t->resv.valid.linux_valid == 0 && rtos_cmdqu_t->resv.valid.rtos_valid == 0) 
+		{
 			// mailbox buffer context is int (4 bytes) access
 			int *ptr = (int *)rtos_cmdqu_t;
 
@@ -85,11 +80,12 @@ int rtos_cmdqu_send(cmdqu_t* cmdq)
 					(rtos_cmdqu_t->resv.valid.linux_valid << 16) |
 					(rtos_cmdqu_t->resv.valid.rtos_valid << 24));
 			rtos_cmdqu_t->param_ptr = cmdq->param_ptr;
-			printf("linux_valid = %d\n", rtos_cmdqu_t->resv.valid.linux_valid);
-			printf("rtos_valid = %d\n", rtos_cmdqu_t->resv.valid.rtos_valid);
+			printf("mailbox contex id = %d\n", valid);	
 			printf("ip_id = %d\n", rtos_cmdqu_t->ip_id);
 			printf("cmd_id = %d\n", rtos_cmdqu_t->cmd_id);
 			printf("block = %d\n", rtos_cmdqu_t->block);
+			printf("linux_valid = %d\n", rtos_cmdqu_t->resv.valid.linux_valid);
+			printf("rtos_valid = %d\n", rtos_cmdqu_t->resv.valid.rtos_valid);
 			printf("param_ptr = %x\n", rtos_cmdqu_t->param_ptr);
 			printf("*ptr = %x\n", *ptr);
 			// clear mailbox
@@ -102,7 +98,8 @@ int rtos_cmdqu_send(cmdqu_t* cmdq)
 		rtos_cmdqu_t++;
 	}
 
-	if (valid >= MAILBOX_MAX_NUM) {
+	if (valid >= MAILBOX_MAX_NUM) 
+	{
 		printf("No valid mailbox is available\n");
 		drv_spin_unlock_irqrestore(&mailbox_lock, mb_flags);
 		return -1;
@@ -133,7 +130,6 @@ void cmdqu_intr(void)
 	int i;
 	cmdqu_t *cmdq;
 	int flags;
-	set_val = mbox_reg->cpu_mbox_set[RECEIVE_CPU].cpu_mbox_int_int.mbox_int;
 	
 	while(1)
 	{
@@ -142,21 +138,20 @@ void cmdqu_intr(void)
 			continue;
 		break;
 	}
-	
+	set_val = mbox_reg->cpu_mbox_set[RECEIVE_CPU].cpu_mbox_int_int.mbox_int;
 	int errno_mailbox[MAILBOX_MAX_NUM] = {0};
 	cmdqu_t err_cmdq[MAILBOX_MAX_NUM];
 	int erro_num = 0;
-	if (set_val) {
-		
-		for(i = 0; i < MAILBOX_MAX_NUM; i++) {
+	if (set_val) 
+	{
+		for(i = 0; i < MAILBOX_MAX_NUM && set_val > 0; i++) 
+		{
 			valid_val = set_val  & (1 << i);
-
-			if (valid_val) {
+			if (valid_val) 
+			{
 				cmdqu_t rtos_cmdq;
 				cmdq = (cmdqu_t *)(mailbox_context) + i;
 
-				printf("mailbox_context =%x\n", mailbox_context);
-				printf("sizeof mailbox_context =%x\n", sizeof(cmdqu_t));
 				/* mailbox buffer context is send from linux, clear mailbox interrupt */
 				mbox_reg->cpu_mbox_set[RECEIVE_CPU].cpu_mbox_int_clr.mbox_int_clr = valid_val;
 				// need to disable enable bit
@@ -166,10 +161,13 @@ void cmdqu_intr(void)
 				*((unsigned long *) &rtos_cmdq) = *((unsigned long *)cmdq);
 				/* need to clear mailbox interrupt before clear mailbox buffer */
 				*((unsigned long*) cmdq) = 0;
+				
+				set_val &= ~valid_val;
 
 				/* mailbox buffer context is send from linux*/
-				if (rtos_cmdq.resv.valid.linux_valid == 1) {
-					printf("cmdq=%x\n", cmdq);
+				if (rtos_cmdq.resv.valid.linux_valid == 1) 
+				{
+					printf("mailbox_contex_id = %d\n", i);
 					printf("cmdq->ip_id =%d\n", rtos_cmdq.ip_id);
 					printf("cmdq->cmd_id =%d\n", rtos_cmdq.cmd_id);
 					printf("cmdq->param_ptr =%x\n", rtos_cmdq.param_ptr);
@@ -177,33 +175,42 @@ void cmdqu_intr(void)
 					printf("cmdq->linux_valid =%d\n", rtos_cmdq.resv.valid.linux_valid);
 					printf("cmdq->rtos_valid =%x\n", rtos_cmdq.resv.valid.rtos_valid);
 					
-					if(CMDID_INVALID(rtos_cmdq.cmd_id)) {
+					if(CMDID_INVALID(rtos_cmdq.cmd_id)) 
+					{
 						printf("recieve a invalid cmd package!\n");
 						continue;
 					}
 
-					if(g_cmd_handler[rtos_cmdq.cmd_id - CMDQU_SEND_TEST] == NULL) {
+					if(g_cmd_handler[rtos_cmdq.cmd_id - CMDQU_SEND_TEST] == NULL) 
+					{
 						printf("a packeg cmd_id don't register %d\n",rtos_cmdq.cmd_id);
 						continue;
 					}
 					
 					int ret = g_cmd_handler[rtos_cmdq.cmd_id - CMDQU_SEND_TEST](&rtos_cmdq, g_private_data[rtos_cmdq.cmd_id - CMDQU_SEND_TEST]);
-					if(ret) {
+					if(ret) 
+					{
 						errno_mailbox[i] = ret;
 						err_cmdq[i] = *cmdq;
 						erro_num++;
 					}
-				} else
-					printf("rtos cmdq is not valid %d, ip=%d , cmd=%d\n",
+				} 
+				else
+				{
+						printf("rtos cmdq is not valid %d, ip=%d , cmd=%d\n",
 						rtos_cmdq.resv.valid.rtos_valid, rtos_cmdq.ip_id, rtos_cmdq.cmd_id);
+				}
 			}
 		}
 	}
 	drv_spin_unlock_irqrestore(&mailbox_lock, flags);
-	if(erro_num > 0) {
+	if(erro_num > 0) 
+	{
 		printf("rtos irq_handler error! total amount: %d\n", erro_num);
-		for (i = 0; i < MAILBOX_MAX_NUM; i++) {
-			if(errno_mailbox[i] != 0) {
+		for (i = 0; i < MAILBOX_MAX_NUM; i++) 
+		{
+			if(errno_mailbox[i] != 0) 
+			{
 				printf("mailbox contex id %d errno %d\n", i, errno_mailbox[i]);
 				printf("cmdq->ip_id =%d\n", err_cmdq[i].ip_id);
 				printf("cmdq->cmd_id =%d\n", err_cmdq[i].cmd_id);

@@ -77,7 +77,7 @@ DEFINE_CVI_SPINLOCK(mailbox_lock, SPIN_MBOX);
 
 irqreturn_t rtos_irq_handler(int irq, void *dev_id)
 {
-	char set_val, done_val;
+	char set_val;
 	int i;
 	int flags;
 	cmdqu_t *cmdq;
@@ -90,15 +90,13 @@ irqreturn_t rtos_irq_handler(int irq, void *dev_id)
 	}
 	pr_info("rtos_irq_handler irq=%d\n", irq);
 	set_val = mbox_reg->cpu_mbox_set[RECEIVE_CPU].cpu_mbox_int_int.mbox_int;
-	done_val = mbox_done_reg->cpu_mbox_done[RECEIVE_CPU].cpu_mbox_int_int.mbox_int;
-	pr_debug("set_val=%x\n", set_val);
-	pr_debug("done_val=%x\n", done_val);
 	int errno_mailbox[MAILBOX_MAX_NUM];
 	cmdqu_t err_cmdq[MAILBOX_MAX_NUM];
 	memset(errno_mailbox, 0, sizeof(errno_mailbox));
 	memset(err_cmdq, 0, sizeof(err_cmdq));
 	int erro_num = 0;
-	for (i = 0; i < MAILBOX_MAX_NUM && set_val > 0; i++) {
+	for (i = 0; i < MAILBOX_MAX_NUM && set_val > 0; i++) 
+	{
 		/* valid_val uses unsigned char because of mailbox register table
 		 * ~valid_val will be 0xFF
 		 */
@@ -106,9 +104,10 @@ irqreturn_t rtos_irq_handler(int irq, void *dev_id)
 
 		pr_debug("MAILBOX_MAX_NUM = %d\n", MAILBOX_MAX_NUM);
 		pr_debug("valid_val = %d set_val=%d i = %d\n", valid_val, set_val, i);
-		if (valid_val) {
+		if (valid_val) 
+		{
 			cmdqu_t linux_cmdq;
-
+			
 			cmdq = (cmdqu_t *)(mailbox_context) + i;
 			/* mailbox buffer context is send from rtos, clear mailbox interrupt */
 			mbox_reg->cpu_mbox_set[RECEIVE_CPU].cpu_mbox_int_clr.mbox_int_clr = valid_val;
@@ -118,12 +117,16 @@ irqreturn_t rtos_irq_handler(int irq, void *dev_id)
 			*((unsigned long long *) &linux_cmdq) = *((unsigned long long *)cmdq);
 			/* need to clear mailbox interrupt before clear mailbox buffer ??*/
 			*((unsigned long long *) cmdq) = 0;
+			
+			set_val &= (~(1<<i));
 
-			if(linux_cmdq.resv.valid.rtos_valid == 0) {
+			if(linux_cmdq.resv.valid.rtos_valid == 0) 
+			{
 				pr_err("a mailbox contex 'linux2rtos' in linux irq_handler\n");
 				continue;
 			}
 			/* mailbox buffer context is send from rtos */
+			pr_debug("mailbox contex id : %d\n",i);
 			pr_debug("cmdq=%p\n", cmdq);
 			pr_debug("cmdq->ip_id =%d\n", linux_cmdq.ip_id);
 			pr_debug("cmdq->cmd_id =%d\n", linux_cmdq.cmd_id);
@@ -132,28 +135,34 @@ irqreturn_t rtos_irq_handler(int irq, void *dev_id)
 			pr_debug("cmdq->linux_valid =%d\n", linux_cmdq.resv.valid.linux_valid);
 			pr_debug("cmdq->rtos_valid =%x", linux_cmdq.resv.valid.rtos_valid);
 
-			if(CMDID_INVALID(linux_cmdq.cmd_id)) {
+			if(CMDID_INVALID(linux_cmdq.cmd_id)) 
+			{
 				pr_err("cmdid don't from rtos don't know!\n");
 				continue;
 			}
-			if(g_cmd_handlers[linux_cmdq.cmd_id - CMDQU_SEND_TEST] == NULL) {
+
+			if(g_cmd_handlers[linux_cmdq.cmd_id - CMDQU_SEND_TEST] == NULL) 
+			{
 				pr_err("linux cmdid don't register handler!\n");
 				continue;
 			}
 			int ret = g_cmd_handlers[linux_cmdq.cmd_id - CMDQU_SEND_TEST](&linux_cmdq, g_private_data[linux_cmdq.cmd_id - CMDQU_SEND_TEST]);
-			if(ret) {
+			if(ret) 
+			{
 				errno_mailbox[i] = ret;
 				err_cmdq[i] = *cmdq;
 				erro_num++;
 			}
 		}
-		set_val &= (~(1<<i));
 	}
 	drv_spin_unlock_irqrestore(&mailbox_lock, flags);
-	if(erro_num > 0) {
+	if(erro_num > 0) 
+	{
 		pr_err("linux irq_handler error! total amount: %d\n", erro_num);
-		for (i = 0; i < MAILBOX_MAX_NUM; i++) {
-			if(errno_mailbox[i] != 0) {
+		for (i = 0; i < MAILBOX_MAX_NUM; i++) 
+		{
+			if(errno_mailbox[i] != 0) 
+			{
 				pr_err("mailbox contex id %d errno %d\n", i, errno_mailbox[i]);
 				pr_err("cmdq->ip_id =%d\n", err_cmdq[i].ip_id);
 				pr_err("cmdq->cmd_id =%d\n", err_cmdq[i].cmd_id);
@@ -215,7 +224,8 @@ long rtos_cmdqu_init(void)
 		mailbox_context[i] = 0;
 	/* init sqirq parameters*/
 
-	for ( i=0;i < MAX_CMD_NUM;i++) {
+	for ( i=0;i < MAX_CMD_NUM;i++) 
+	{
 		g_cmd_handlers[i] = NULL;
 		g_private_data[i] = NULL;
 	}
@@ -246,36 +256,30 @@ int rtos_cmdqu_send(cmdqu_t *cmdq)
 	cmdqu_t *linux_cmdqu_t;
 
 	pr_debug("RTOS_CMDQU_SEND\n");
-	pr_debug("ip_id=%d cmd_id=%d param_ptr=%x\n", cmdq->ip_id, cmdq->cmd_id, (unsigned int)cmdq->param_ptr);
-
+	
 	spin_lock_irqsave(&mailbox_queue_lock, flags);
 	// when linux and rtos send command at the same time, it might cause a problem.
 	// might need to spinlock with rtos, do it later
 	drv_spin_lock_irqsave(&mailbox_lock, mb_flags);
-	if (mb_flags == MAILBOX_LOCK_FAILED) {
+	if (mb_flags == MAILBOX_LOCK_FAILED) 
+	{
 		pr_err("ip_id=%d cmd_id=%d param_ptr=%x\n", cmdq->ip_id, cmdq->cmd_id, (unsigned int)cmdq->param_ptr);
 		spin_unlock_irqrestore(&mailbox_queue_lock, flags);
 		return -EBUSY;
 	}
-
 	linux_cmdqu_t = (cmdqu_t *) mailbox_context;
-	pr_debug("mailbox_context = %p\n", mailbox_context);
-	pr_debug("linux_cmdqu_t = %p\n", linux_cmdqu_t);
-	pr_debug("cmdq->ip_id = %d\n", cmdq->ip_id);
-	pr_debug("cmdq->cmd_id = %d\n", cmdq->cmd_id);
-	pr_debug("cmdq->block = %d\n", cmdq->block);
-	pr_debug("cmdq->para_ptr = %d\n", cmdq->param_ptr);
-
-	for (valid = 0; valid < MAILBOX_MAX_NUM; valid++) {
-		if (linux_cmdqu_t->resv.valid.linux_valid == 0 && linux_cmdqu_t->resv.valid.rtos_valid == 0) {
+	for (valid = 0; valid < MAILBOX_MAX_NUM; valid++) 
+	{
+		if (linux_cmdqu_t->resv.valid.linux_valid == 0 && linux_cmdqu_t->resv.valid.rtos_valid == 0) 
+		{
 			// mailbox buffer context is int (4 bytes) access
 			int *ptr = (int *)linux_cmdqu_t;
-
 			linux_cmdqu_t->resv.valid.linux_valid = 1;
 			*ptr = ((cmdq->ip_id << 0) | (cmdq->cmd_id << 8) | (cmdq->block << 15) |
 					(linux_cmdqu_t->resv.valid.linux_valid << 16) |
 					(linux_cmdqu_t->resv.valid.rtos_valid << 24));
 			linux_cmdqu_t->param_ptr = cmdq->param_ptr;
+			pr_debug("mailbox contexid = %d\n", valid);
 			pr_debug("linux_valid = %d\n", linux_cmdqu_t->resv.valid.linux_valid);
 			pr_debug("rtos_valid = %d\n", linux_cmdqu_t->resv.valid.rtos_valid);
 			pr_debug("ip_id = %d\n", linux_cmdqu_t->ip_id);
@@ -288,13 +292,13 @@ int rtos_cmdqu_send(cmdqu_t *cmdq)
 			// trigger mailbox valid to rtos
 			mbox_reg->cpu_mbox_en[SEND_TO_CPU].mbox_info |= (1 << valid);
 			mbox_reg->mbox_set.mbox_set = (1 << valid);
-
 			break;
 		}
 		linux_cmdqu_t++;
 	}
 
-	if (valid >= MAILBOX_MAX_NUM) {
+	if (valid >= MAILBOX_MAX_NUM) 
+	{
 		pr_err("No valid mailbox is available\n");
 		drv_spin_unlock_irqrestore(&mailbox_lock, mb_flags);
 		spin_unlock_irqrestore(&mailbox_queue_lock, flags);

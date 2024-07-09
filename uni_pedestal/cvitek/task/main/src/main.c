@@ -12,9 +12,9 @@ extern void main_cvirtos(void);
 
 extern void rv_trap(void);
 
-int test_data[23];
+int _bss_test[23];
 
-int data[7] = {0x12, 0x34, 0x56, 0x78, 0x90, 0x23, 0x45 };
+int _data_test[7] = {0x12, 0x34, 0x56, 0x78, 0x90, 0x23, 0x45 };
 
 int main()
 {
@@ -24,20 +24,20 @@ int main()
     int data_ensure = 1;
     for(int i=0; i<23; i++)
     {
-	if(test_data[i] != 0)
+	if(_bss_test[i] != 0)
 	{
 		bss_ensure = 0;
 		break;
 	}
     }
-    if(data[0] != 0x12 || data[1] !=0x34 || data[2] != 0x56 || data[3] != 0x78 || data[4] != 0x90 || data[5] != 0x23 || data[6] != 0x45 )
+    if(_data_test[0] != 0x12 || _data_test[1] !=0x34 || _data_test[2] != 0x56 || _data_test[3] != 0x78 || _data_test[4] != 0x90 || _data_test[5] != 0x23 || _data_test[6] != 0x45 )
 	data_ensure = 0;
     if(bss_ensure != 1)
 	    printf(".bss not init as wanted!\n");
     if(data_ensure != 1)
     {
 	printf(".data not init as wanted!\n");
-    	printf("[0-6]: %x %x %x %x %x %x %x\n", data[0], data[1], data[2], data[3], data[4], data[5], data[6]);
+    	printf("[0-6]: %x %x %x %x %x %x %x\n", _data_test[0], _data_test[1], _data_test[2], _data_test[3], _data_test[4], _data_test[5], _data_test[6]);
     }
     write_csr(mtvec, rv_trap);
     if(data_ensure != 1 || bss_ensure != 1)
