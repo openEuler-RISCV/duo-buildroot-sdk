@@ -392,41 +392,41 @@ static __init int cvi_rtos_cmdqu_init(void)
 	platform_driver_register(&cvi_rtos_cmdqu_driver);
 	pr_debug("%s done\n", __func__);
 	cvi_spinlock_init();
-	cmdqu_t test_cmd;
-	test_cmd.cmd_id = CMDQU_SEND_TEST;
-	test_cmd.ip_id = 0;
-	test_cmd.block = 0;
-	test_cmd.param_ptr = 0;
-	test_cmd.resv.mstime = 0;
-	BUG_ON(rtos_cmdqu_send(&test_cmd) != 0);
-	mdelay(1000);
-	test_cmd.cmd_id = CMDQU_DUO_TEST;
-	test_cmd.ip_id = 0x234;
-	test_cmd.block = 1;
-	test_cmd.param_ptr = 3;
-	test_cmd.resv.mstime = 4;
-	BUG_ON(rtos_cmdqu_send(&test_cmd) != 0);
-	mdelay(1000);
+	// cmdqu_t test_cmd;
+	// test_cmd.cmd_id = CMDQU_SEND_TEST;
+	// test_cmd.ip_id = 0;
+	// test_cmd.block = 0;
+	// test_cmd.param_ptr = 0;
+	// test_cmd.resv.mstime = 0;
+	// BUG_ON(rtos_cmdqu_send(&test_cmd) != 0);
+	// mdelay(1000);
+	// test_cmd.cmd_id = CMDQU_DUO_TEST;
+	// test_cmd.ip_id = 0x234;
+	// test_cmd.block = 1;
+	// test_cmd.param_ptr = 3;
+	// test_cmd.resv.mstime = 4;
+	// BUG_ON(rtos_cmdqu_send(&test_cmd) != 0);
+	// mdelay(1000);
 
-	test_cmd.cmd_id = 123;
-	test_cmd.ip_id = 0x234;
-	test_cmd.block = 1;
-	test_cmd.param_ptr = 3;
-	test_cmd.resv.mstime = 4;
-	BUG_ON(rtos_cmdqu_send(&test_cmd) != 0);
-	mdelay(1000);
+	// test_cmd.cmd_id = 123;
+	// test_cmd.ip_id = 0x234;
+	// test_cmd.block = 1;
+	// test_cmd.param_ptr = 3;
+	// test_cmd.resv.mstime = 4;
+	// BUG_ON(rtos_cmdqu_send(&test_cmd) != 0);
+	// mdelay(1000);
 
-	test_cmd.cmd_id = CMDQU_SEND_TEST;
-	test_cmd.ip_id = 0;
-	test_cmd.block = 0;
-	test_cmd.param_ptr = 0;
-	test_cmd.resv.mstime = 0;
-	int i;
-	for(i =0;i<10;i++)
-	{
-		rtos_cmdqu_send(&test_cmd);
-	}
-	mdelay(1000);
+	// test_cmd.cmd_id = CMDQU_SEND_TEST;
+	// test_cmd.ip_id = 0;
+	// test_cmd.block = 0;
+	// test_cmd.param_ptr = 0;
+	// test_cmd.resv.mstime = 0;
+	// int i;
+	// for(i =0;i<10;i++)
+	// {
+	// 	rtos_cmdqu_send(&test_cmd);
+	// }
+	// mdelay(1000);
 
 	return 0;
 }

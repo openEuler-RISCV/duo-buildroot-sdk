@@ -38,7 +38,7 @@
 #include <linux/of_address.h>
 #include <linux/of_irq.h>
 #include <linux/version.h>
-#include <linux/kprobes.h>
+#include <linux/random.h>
 #include <asm/page.h>
 #include <asm/pgtable.h>
 #include <asm/io.h>
@@ -115,13 +115,16 @@ static void remove_mcs_ipi(void)
 {
 	request_cmdqu_irq(CMDQU_MCS_COMMUNICATE, NULL, NULL);
 	return;
+
 }
 
 static int __private_boot_cpu(struct cpu_info* cpu)
 {
+    uint8_t pakcage_id;
+    get_random_bytes(&pakcage_id, 1);
     int ret;
     cmdqu_t cmd_boot;
-    cmd_boot.ip_id = 1;
+    cmd_boot.ip_id = pakcage_id;
     cmd_boot.cmd_id = CMDQU_MCS_BOOT;
     cmd_boot.block = 0;
     cmd_boot.resv.mstime = 0;
@@ -129,9 +132,10 @@ static int __private_boot_cpu(struct cpu_info* cpu)
     ret = rtos_cmdqu_send(&cmd_boot);
     if(ret)
         return ret;
-    cmd_boot.ip_id = 2;
+    cmd_boot.ip_id = pakcage_id + 1;
     cmd_boot.cmd_id = CMDQU_MCS_BOOT;
     cmd_boot.block = 0;
+    
     cmd_boot.resv.mstime = 0;
     cmd_boot.param_ptr = (uint32_t)(((cpu->boot_addr) & 0xffffffff00000000) >> 32);
     ret = rtos_cmdqu_send(&cmd_boot);
@@ -205,7 +209,7 @@ static long mcs_ioctl(struct file *f, unsigned int cmd, unsigned long arg)
                 pr_err("error cpuid, milkv-duo only support boot C906L, CPU2!\n");
                 return -EINVAL;
             }
-            pr_info("start booting clientos on cpu%d(%llx) addr(0x%llx)\n", info.cpu, info.boot_addr);
+            pr_info("start booting clientos on cpu%d(%llx)\n", info.cpu, info.boot_addr);
             ret = __private_boot_cpu(&info);
             if(ret)
                 return ret;
@@ -246,6 +250,8 @@ static int mcs_mmap(struct file *file, struct vm_area_struct *vma)
     int i;
     int found = 0;
     size_t size = vma->vm_end - vma->vm_start;
+    
+    
     phys_addr_t offset = (phys_addr_t)vma->vm_pgoff << PAGE_SHIFT;
     /* Does it even fit in phys_addr_t? */
     if (offset >> PAGE_SHIFT != vma->vm_pgoff)
@@ -255,20 +261,20 @@ static int mcs_mmap(struct file *file, struct vm_area_struct *vma)
             return -EINVAL;
     for (i = 0; (i < RPROC_MEM_MAX) && (mem[i].phy_addr != 0 ); i++) 
     {
-            if (offset >= mem[i].phy_addr && (offset + size -1) <= (mem[i].phy_addr + mem[i].size -1)) 
-            {
-                    found = 1;
-                    break;
-            }
+        if (offset >= mem[i].phy_addr && (offset + size -1) <= (mem[i].phy_addr + mem[i].size -1)) 
+        {
+            found = 1;
+            break;
+        }
     }
 
     if (found == 0) 
     {
-            pr_err("mmap failed: mmap memory is not in mcs reserved memory %llx\n", offset);
-            return -EINVAL;
+        pr_err("mmap failed: mmap memory is not in mcs reserved memory %llx\n", offset);
+        return -EINVAL;
     }
     
-    pr_info("mcs_mmap: want /dev/mcs address: %llx \n", offset);
+    pr_info("mcs_mmap: want /dev/mcs address: %llx want size %llx\n", offset, size);
     
     vma->vm_page_prot = mcs_phys_mem_access_prot(file, vma->vm_pgoff,
                                                  size,
@@ -283,12 +289,13 @@ static int mcs_mmap(struct file *file, struct vm_area_struct *vma)
                         size,
                         vma->vm_page_prot) < 0)
             return -EAGAIN;
-
     return 0;
 }
 
 static int mcs_open(struct inode *inode, struct file *filp)
 {
+    if (!capable(CAP_SYS_RAWIO))
+		return -EPERM;
 	return 0;
 }
 

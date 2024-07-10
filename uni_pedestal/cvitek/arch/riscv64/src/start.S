@@ -71,7 +71,7 @@ _start:
 	// enable interrupt
 	li x3, 0x880
 	csrw mie, x3
-
+/*
 #ifndef RISCV_QEMU
 	// invalidate all memory for BTB,BHT,DCACHE,ICACHE
 	li x3, 0x30013
@@ -83,6 +83,7 @@ _start:
 	li x3, 0x610c
 	csrs mhint, x3 #mhint
 #endif
+*/	
 	# enable fp
 	li x3, 0x1 << 13
 	csrs mstatus, x3

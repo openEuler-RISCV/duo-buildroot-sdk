@@ -43,7 +43,7 @@ int main()
     if(data_ensure != 1 || bss_ensure != 1)
 	while(1) __asm__ __volatile__("wfi");
     printf("ensure .bss and .data init as wanted!\n");
-    printf("[UniProton]: start to init OsConfig!\n");
+    printf("start to init OsConfig!\n");
     main_cvirtos();
     while(1) __asm__  __volatile__("wfi");
 }
