@@ -1,5 +1,11 @@
 # Milkv-duo  C906L 小核 UniProton 支持说明
 
+## MICA 混合部署效果
+
+![](./uniproton.gif)
+
+
+
 ## 简介
 
 - 适配小核 uniproton 硬件的 duo-buildroot-sdk

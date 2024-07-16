@@ -1,5 +1,9 @@
 English | [简体中文](./README-zh.md) | [日本語](./README-ja.md)
 
+# Use MICA in openEuler RISC-V
+
+ ![](./uni_pedestal/uniproton.gif)
+
 # Project Introduction
 
 Milk-V Duo is an ultra-compact embedded development platform based on the CV1800B chip. It can run Linux and RTOS, providing a reliable, low-cost, and high-performance platform for professionals, industrial ODMs, AIoT enthusiasts, DIY hobbyists, and creators.
@@ -421,7 +425,7 @@ then reboot the board.
    The CV1800B chip adopts a dual-core design. Currently, the Linux system runs on one of the cores, while the other core is used for running a real-time system. For the use of this core, please see [official documentation](https://milkv.io/docs/duo/getting-started/rtoscore).
 
 2. Why does it only show 28M when viewing the RAM?
- 
+
    Because a portion of the RAM is allocated to [ION](https://github.com/milkv-duo/duo-buildroot-sdk/blob/develop/build/boards/default/dts/cv180x/cv180x_default_memmap.dtsi#L15), which is the memory used when running algorithms with the camera. If you're not using the camera, you can modify the value of this [ION_SIZE](https://github.com/milkv-duo/duo-buildroot-sdk/blob/develop/build/boards/cv180x/cv1800b_milkv_duo_sd/memmap.py#L43) to 0 and then recompile to generate the image(Duo 256M: [ION_SIZE](https://github.com/milkv-duo/duo-buildroot-sdk/blob/develop/build/boards/cv181x/cv1812cp_milkv_duo256m_sd/memmap.py#L43)).
 
 ## Links to some documentation from the chip manufacturer
