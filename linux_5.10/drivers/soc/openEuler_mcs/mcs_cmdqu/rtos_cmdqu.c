@@ -102,8 +102,8 @@ irqreturn_t rtos_irq_handler(int irq, void *dev_id)
 		 */
 		unsigned char valid_val = set_val & (1 << i);
 
-		pr_debug("MAILBOX_MAX_NUM = %d\n", MAILBOX_MAX_NUM);
-		pr_debug("valid_val = %d set_val=%d i = %d\n", valid_val, set_val, i);
+		//pr_debug("MAILBOX_MAX_NUM = %d\n", MAILBOX_MAX_NUM);
+		//pr_debug("valid_val = %d set_val=%d i = %d\n", valid_val, set_val, i);
 		if (valid_val) 
 		{
 			cmdqu_t linux_cmdq;
@@ -126,14 +126,14 @@ irqreturn_t rtos_irq_handler(int irq, void *dev_id)
 				continue;
 			}
 			/* mailbox buffer context is send from rtos */
-			pr_debug("mailbox contex id : %d\n",i);
-			pr_debug("cmdq=%p\n", cmdq);
-			pr_debug("cmdq->ip_id =%d\n", linux_cmdq.ip_id);
-			pr_debug("cmdq->cmd_id =%d\n", linux_cmdq.cmd_id);
-			pr_debug("cmdq->param_ptr =%x\n", linux_cmdq.param_ptr);
-			pr_debug("cmdq->block =%d\n", linux_cmdq.block);
-			pr_debug("cmdq->linux_valid =%d\n", linux_cmdq.resv.valid.linux_valid);
-			pr_debug("cmdq->rtos_valid =%x", linux_cmdq.resv.valid.rtos_valid);
+			//pr_debug("mailbox contex id : %d\n",i);
+			//pr_debug("cmdq=%p\n", cmdq);
+			//pr_debug("cmdq->ip_id =%d\n", linux_cmdq.ip_id);
+			//pr_debug("cmdq->cmd_id =%d\n", linux_cmdq.cmd_id);
+			//pr_debug("cmdq->param_ptr =%x\n", linux_cmdq.param_ptr);
+			//pr_debug("cmdq->block =%d\n", linux_cmdq.block);
+			//pr_debug("cmdq->linux_valid =%d\n", linux_cmdq.resv.valid.linux_valid);
+			//pr_debug("cmdq->rtos_valid =%x", linux_cmdq.resv.valid.rtos_valid);
 
 			if(CMDID_INVALID(linux_cmdq.cmd_id)) 
 			{
@@ -256,7 +256,7 @@ int rtos_cmdqu_send(cmdqu_t *cmdq)
 	int mb_flags;
 	cmdqu_t *linux_cmdqu_t;
 
-	pr_debug("RTOS_CMDQU_SEND\n");
+	pr_debug("rtos_cmd_qu send\n");
 	
 	spin_lock_irqsave(&mailbox_queue_lock, flags);
 	// when linux and rtos send command at the same time, it might cause a problem.
@@ -280,14 +280,14 @@ int rtos_cmdqu_send(cmdqu_t *cmdq)
 					(linux_cmdqu_t->resv.valid.linux_valid << 16) |
 					(linux_cmdqu_t->resv.valid.rtos_valid << 24));
 			linux_cmdqu_t->param_ptr = cmdq->param_ptr;
-			pr_debug("mailbox contexid = %d\n", valid);
-			pr_debug("linux_valid = %d\n", linux_cmdqu_t->resv.valid.linux_valid);
-			pr_debug("rtos_valid = %d\n", linux_cmdqu_t->resv.valid.rtos_valid);
-			pr_debug("ip_id = %d\n", linux_cmdqu_t->ip_id);
-			pr_debug("cmd_id = %d\n", linux_cmdqu_t->cmd_id);
-			pr_debug("block = %d\n", linux_cmdqu_t->block);
-			pr_debug("param_ptr = %x\n", linux_cmdqu_t->param_ptr);
-			pr_debug("*ptr = %x\n", *ptr);
+			//pr_debug("mailbox contexid = %d\n", valid);
+		//	pr_debug("linux_valid = %d\n", linux_cmdqu_t->resv.valid.linux_valid);
+			//pr_debug("rtos_valid = %d\n", linux_cmdqu_t->resv.valid.rtos_valid);
+			//pr_debug("ip_id = %d\n", linux_cmdqu_t->ip_id);
+			//pr_debug("cmd_id = %d\n", linux_cmdqu_t->cmd_id);
+			//pr_debug("block = %d\n", linux_cmdqu_t->block);
+			//pr_debug("param_ptr = %x\n", linux_cmdqu_t->param_ptr);
+			//pr_debug("*ptr = %x\n", *ptr);
 			// clear mailbox
 			mbox_reg->cpu_mbox_set[SEND_TO_CPU].cpu_mbox_int_clr.mbox_int_clr = (1 << valid);
 			// trigger mailbox valid to rtos

@@ -118,6 +118,7 @@ typedef int (*irq_handler_t)(int irqn, void *priv);
 
 int request_irq(int irqn, irq_handler_t handler,
 		       unsigned long flags, const char *name, void *priv);
+void clear_irq(int irqn);
 
 /*
 void disable_irq(unsigned int irqn);

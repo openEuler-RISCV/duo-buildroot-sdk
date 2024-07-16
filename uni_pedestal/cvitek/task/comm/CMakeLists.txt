@@ -1,4 +1,4 @@
-file(GLOB _SOURCES "src/${RUN_ARCH}/*.c")
+file(GLOB _SOURCES "src/${RUN_ARCH}/*.c" "src/${RUN_ARCH}/*.S")
 
 include_directories(include)
 include_directories(../main/src)

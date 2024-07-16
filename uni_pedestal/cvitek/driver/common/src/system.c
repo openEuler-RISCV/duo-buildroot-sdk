@@ -205,6 +205,17 @@ void irq_init(void)
     	//set_csr(mie, MIP_MTIE);
 }
 
+void clear_irq(int irqn)
+{
+	g_irq_action[irqn].handler = NULL;
+	g_irq_action[irqn].irqn = 0;
+	g_irq_action[irqn].flags = 0;
+	g_irq_action[irqn].priv = NULL;
+	memset(g_irq_action[irqn].name, 0, sizeof(g_irq_action[irqn].name));
+	sirq_chip.irq_set_priority( irqn, 0);
+	sirq_chip.irq_mask(irqn);
+}
+
 int request_irq(int irqn, irq_handler_t handler, unsigned long flags,
         const char *name, void *priv)
 {

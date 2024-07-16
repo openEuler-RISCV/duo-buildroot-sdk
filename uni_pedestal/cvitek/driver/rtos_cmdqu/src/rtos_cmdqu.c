@@ -58,7 +58,7 @@ int rtos_cmdqu_send(cmdqu_t* cmdq)
 	int mb_flags;
 	cmdqu_t *rtos_cmdqu_t;
 
-	printf("cmdqu send start!\n");
+	//printf("cmdqu send start!\n");
 
 	drv_spin_lock_irqsave(&mailbox_lock, mb_flags);
 	if (mb_flags == MAILBOX_LOCK_FAILED) 
@@ -80,14 +80,14 @@ int rtos_cmdqu_send(cmdqu_t* cmdq)
 					(rtos_cmdqu_t->resv.valid.linux_valid << 16) |
 					(rtos_cmdqu_t->resv.valid.rtos_valid << 24));
 			rtos_cmdqu_t->param_ptr = cmdq->param_ptr;
-			printf("mailbox contex id = %d\n", valid);	
-			printf("ip_id = %d\n", rtos_cmdqu_t->ip_id);
-			printf("cmd_id = %d\n", rtos_cmdqu_t->cmd_id);
-			printf("block = %d\n", rtos_cmdqu_t->block);
-			printf("linux_valid = %d\n", rtos_cmdqu_t->resv.valid.linux_valid);
-			printf("rtos_valid = %d\n", rtos_cmdqu_t->resv.valid.rtos_valid);
-			printf("param_ptr = %x\n", rtos_cmdqu_t->param_ptr);
-			printf("*ptr = %x\n", *ptr);
+			//printf("mailbox contex id = %d\n", valid);	
+			//printf("ip_id = %d\n", rtos_cmdqu_t->ip_id);
+			//printf("cmd_id = %d\n", rtos_cmdqu_t->cmd_id);
+			//printf("block = %d\n", rtos_cmdqu_t->block);
+			//printf("linux_valid = %d\n", rtos_cmdqu_t->resv.valid.linux_valid);
+			//printf("rtos_valid = %d\n", rtos_cmdqu_t->resv.valid.rtos_valid);
+			//printf("param_ptr = %x\n", rtos_cmdqu_t->param_ptr);
+			//printf("*ptr = %x\n", *ptr);
 			// clear mailbox
 			mbox_reg->cpu_mbox_set[SEND_TO_CPU1].cpu_mbox_int_clr.mbox_int_clr = (1 << valid);
 			// trigger mailbox valid to rtos
@@ -120,7 +120,7 @@ void rtos_cmdqu_init(void)
         g_cmd_handler[i] = NULL;
         g_private_data[i] = NULL;
     }       
-	printf("rtos cmdqu init done!\n");
+    printf("rtos cmdqu init done!\n");
 }
 
 void cmdqu_intr(void)
@@ -167,13 +167,13 @@ void cmdqu_intr(void)
 				/* mailbox buffer context is send from linux*/
 				if (rtos_cmdq.resv.valid.linux_valid == 1) 
 				{
-					printf("mailbox_contex_id = %d\n", i);
-					printf("cmdq->ip_id =%d\n", rtos_cmdq.ip_id);
-					printf("cmdq->cmd_id =%d\n", rtos_cmdq.cmd_id);
-					printf("cmdq->param_ptr =%x\n", rtos_cmdq.param_ptr);
-					printf("cmdq->block =%x\n", rtos_cmdq.block);
-					printf("cmdq->linux_valid =%d\n", rtos_cmdq.resv.valid.linux_valid);
-					printf("cmdq->rtos_valid =%x\n", rtos_cmdq.resv.valid.rtos_valid);
+					//printf("mailbox_contex_id = %d\n", i);
+					//printf("cmdq->ip_id =%d\n", rtos_cmdq.ip_id);
+					//printf("cmdq->cmd_id =%d\n", rtos_cmdq.cmd_id);
+					//printf("cmdq->param_ptr =%x\n", rtos_cmdq.param_ptr);
+					//printf("cmdq->block =%x\n", rtos_cmdq.block);
+					//printf("cmdq->linux_valid =%d\n", rtos_cmdq.resv.valid.linux_valid);
+					//printf("cmdq->rtos_valid =%x\n", rtos_cmdq.resv.valid.rtos_valid);
 					
 					if(CMDID_INVALID(rtos_cmdq.cmd_id)) 
 					{

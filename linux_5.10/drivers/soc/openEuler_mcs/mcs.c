@@ -95,12 +95,14 @@ static atomic_t irq_ack;
 
 static int mcs_rtos_callback(cmdqu_t* cmdq, void* data)
 {
+    (void)cmdq;
+    (void)data;
     BUG_ON(cmdq == NULL);
     BUG_ON(data != NULL);
     BUG_ON(cmdq->cmd_id != CMDQU_MCS_COMMUNICATE);
     pr_info("received ipi from client os\n");
-	atomic_set(&irq_ack, 1);
-	wake_up_interruptible(&mcs_wait_queue);
+    atomic_set(&irq_ack, 1);
+    wake_up_interruptible(&mcs_wait_queue);
     return 0;
 }
 
@@ -232,10 +234,12 @@ static long mcs_ioctl(struct file *f, unsigned int cmd, unsigned long arg)
 	return 0;
 }
 
+extern pgprot_t phys_mem_access_prot(struct file *file, unsigned long pfn, unsigned long size, pgprot_t vma_prot);
 static pgprot_t mcs_phys_mem_access_prot(struct file *file, unsigned long pfn,
                                          unsigned long size, pgprot_t vma_prot)
 {
-        return pgprot_noncached(vma_prot);
+	pgprot_t prot =  pgprot_noncached(vma_prot);
+	return prot;
 }
 
 static const struct vm_operations_struct mmap_mem_ops = {
@@ -249,6 +253,7 @@ static int mcs_mmap(struct file *file, struct vm_area_struct *vma)
 {
     int i;
     int found = 0;
+    int shmem_blk = 0;
     size_t size = vma->vm_end - vma->vm_start;
     
     
@@ -263,6 +268,8 @@ static int mcs_mmap(struct file *file, struct vm_area_struct *vma)
     {
         if (offset >= mem[i].phy_addr && (offset + size -1) <= (mem[i].phy_addr + mem[i].size -1)) 
         {
+	    if(i == 0)
+		shmem_blk = 1;
             found = 1;
             break;
         }
@@ -274,12 +281,14 @@ static int mcs_mmap(struct file *file, struct vm_area_struct *vma)
         return -EINVAL;
     }
     
-    pr_info("mcs_mmap: want /dev/mcs address: %llx want size %llx\n", offset, size);
-    
-    vma->vm_page_prot = mcs_phys_mem_access_prot(file, vma->vm_pgoff,
-                                                 size,
-                                                 vma->vm_page_prot);
-
+    pr_info("mcs_mmap: want /dev/mcs address: %llx want size %llx to process mem %llx\n", offset, size, vma->vm_start);
+    if(shmem_blk == 1)
+    	vma->vm_page_prot = mcs_phys_mem_access_prot(file, vma->vm_pgoff,
+                	                                 size,
+        	                                        vma->vm_page_prot);
+    else 
+	vma->vm_page_prot = vma->vm_page_prot;
+	
     vma->vm_ops = &mmap_mem_ops;
 
     /* Remap-pfn-range will mark the range VM_IO */
@@ -340,11 +349,12 @@ static int init_reserved_mem(void)
             if (n >= RPROC_MEM_MAX)
                     break;
 
-            if (!request_mem_region(res.start, resource_size(&res), "mcs_mem")) 
-            {
-                    pr_err("Can not request mcs_mem, 0x%llx-0x%llx\n", res.start, res.end);
-                    return -EINVAL;
-            }
+	    if (!request_mem_region(res.start, resource_size(&res), "mcs_mem")) 
+	    {
+	        pr_err("Can not request mcs_mem, 0x%llx-0x%llx\n", res.start, res.end);
+	        return -EINVAL;
+	    }
+
             mem[n].phy_addr = res.start;
             mem[n].size = resource_size(&res);
             n++;
@@ -359,7 +369,9 @@ static void release_reserved_mem(void)
 {
 	int i;
 	for (i = 0; (i < RPROC_MEM_MAX) && (mem[i].phy_addr != 0); i++) 
-    {
+    	{
+		mem[i].phy_addr = 0;
+		mem[i].size = 0;
 		release_mem_region(mem[i].phy_addr, mem[i].size);
 	}
 }
