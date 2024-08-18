@@ -1,0 +1,6 @@
+# ninja log v5
+1	23	1723974994791485909	riscv64/CMakeFiles/arch.dir/src/start.S.obj	edae90d5ae808061
+0	37	1723974994805485110	riscv64/CMakeFiles/arch.dir/src/arch_sleep.c.obj	7cf79b10d5aa1921
+1	44	1723974994812484711	riscv64/CMakeFiles/arch.dir/src/cache.c.obj	7b12febbd3b6d16a
+45	65	1723974994834483455	riscv64/libarch.a	f7f1b480f72104d
+65	78	0	CMakeFiles/install.util	c3d50348f5f31e12

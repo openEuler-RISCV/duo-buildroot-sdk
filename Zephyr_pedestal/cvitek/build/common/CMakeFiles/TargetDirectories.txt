@@ -1,0 +1,7 @@
+/home/work/Zephyr_pedestal/cvitek/build/common/CMakeFiles/common.dir
+/home/work/Zephyr_pedestal/cvitek/build/common/CMakeFiles/edit_cache.dir
+/home/work/Zephyr_pedestal/cvitek/build/common/CMakeFiles/rebuild_cache.dir
+/home/work/Zephyr_pedestal/cvitek/build/common/CMakeFiles/list_install_components.dir
+/home/work/Zephyr_pedestal/cvitek/build/common/CMakeFiles/install.dir
+/home/work/Zephyr_pedestal/cvitek/build/common/CMakeFiles/install/local.dir
+/home/work/Zephyr_pedestal/cvitek/build/common/CMakeFiles/install/strip.dir

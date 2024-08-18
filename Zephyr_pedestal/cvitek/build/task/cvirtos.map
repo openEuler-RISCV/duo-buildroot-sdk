@@ -1,0 +1,691 @@
+Archive member included to satisfy reference by file (symbol)
+
+comm/libcomm.a(comm_main.c.obj)
+                              main/CMakeFiles/cvirtos.elf.dir/src/main.c.obj (main_cvirtos)
+comm/libcomm.a(shutdown.S.obj)
+                              comm/libcomm.a(comm_main.c.obj) (uni_shutdown)
+/home/work/Zephyr_pedestal/cvitek/install/lib/libarch.a(start.S.obj)
+                              (_start)
+/home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(system.c.obj)
+                              main/CMakeFiles/cvirtos.elf.dir/src/main.c.obj (post_system_init)
+/home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(pinmux.c.obj)
+                              /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(system.c.obj) (pinmux_init)
+/home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(printf.c.obj)
+                              main/CMakeFiles/cvirtos.elf.dir/src/main.c.obj (printf)
+/home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(snprintf.c.obj)
+                              /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(printf.c.obj) (vsnprintf)
+/home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(uart.c.obj)
+                              comm/libcomm.a(comm_main.c.obj) (uart_init)
+/home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(rtos_cmdqu.c.obj)
+                              comm/libcomm.a(comm_main.c.obj) (request_cmdqu_irq)
+/home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(cvi_spinlock.c.obj)
+                              /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(rtos_cmdqu.c.obj) (cvi_spinlock_init)
+/home/work/Zephyr_pedestal/cvitek/install/lib/libhal.a(hal_uart_dw.c.obj)
+                              /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(uart.c.obj) (hal_uart_init)
+/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/lib/rv64imafdc/lp64d/libc.a(lib_a-memcpy.o)
+                              /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(system.c.obj) (memcpy)
+/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/lib/rv64imafdc/lp64d/libc.a(lib_a-memset.o)
+                              /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(system.c.obj) (memset)
+/home/work/Zephyr_pedestal/cvitek/install/lib/libcommon.a(sleep.c.obj)
+                              /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(cvi_spinlock.c.obj) (usleep)
+/home/work/Zephyr_pedestal/cvitek/install/lib/libarch.a(arch_sleep.c.obj)
+                              /home/work/Zephyr_pedestal/cvitek/install/lib/libcommon.a(sleep.c.obj) (arch_usleep)
+
+Discarded input sections
+
+ .text          0x0000000000000000        0x0 main/CMakeFiles/cvirtos.elf.dir/src/main.c.obj
+ .data          0x0000000000000000        0x0 main/CMakeFiles/cvirtos.elf.dir/src/main.c.obj
+ .bss           0x0000000000000000        0x0 main/CMakeFiles/cvirtos.elf.dir/src/main.c.obj
+ .data          0x0000000000000000        0x0 main/CMakeFiles/cvirtos.elf.dir/src/trap.S.obj
+ .bss           0x0000000000000000        0x0 main/CMakeFiles/cvirtos.elf.dir/src/trap.S.obj
+ .text          0x0000000000000000        0x0 main/CMakeFiles/cvirtos.elf.dir/src/trap_handler.c.obj
+ .data          0x0000000000000000        0x0 main/CMakeFiles/cvirtos.elf.dir/src/trap_handler.c.obj
+ .bss           0x0000000000000000        0x0 main/CMakeFiles/cvirtos.elf.dir/src/trap_handler.c.obj
+ .text          0x0000000000000000        0x0 comm/libcomm.a(comm_main.c.obj)
+ .data          0x0000000000000000        0x0 comm/libcomm.a(comm_main.c.obj)
+ .bss           0x0000000000000000        0x0 comm/libcomm.a(comm_main.c.obj)
+ .data          0x0000000000000000        0x0 comm/libcomm.a(shutdown.S.obj)
+ .bss           0x0000000000000000        0x0 comm/libcomm.a(shutdown.S.obj)
+ .text          0x0000000000000000        0x0 /home/work/Zephyr_pedestal/cvitek/install/lib/libarch.a(start.S.obj)
+ .data          0x0000000000000000        0x0 /home/work/Zephyr_pedestal/cvitek/install/lib/libarch.a(start.S.obj)
+ .bss           0x0000000000000000        0x0 /home/work/Zephyr_pedestal/cvitek/install/lib/libarch.a(start.S.obj)
+ .text          0x0000000000000000        0x0 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(system.c.obj)
+ .data          0x0000000000000000        0x0 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(system.c.obj)
+ .bss           0x0000000000000000        0x0 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(system.c.obj)
+ .text.enable_irq
+                0x0000000000000000        0x8 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(system.c.obj)
+ .text          0x0000000000000000        0x0 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(pinmux.c.obj)
+ .data          0x0000000000000000        0x0 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(pinmux.c.obj)
+ .bss           0x0000000000000000        0x0 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(pinmux.c.obj)
+ .text          0x0000000000000000        0x0 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(printf.c.obj)
+ .data          0x0000000000000000        0x0 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(printf.c.obj)
+ .bss           0x0000000000000000        0x0 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(printf.c.obj)
+ .text          0x0000000000000000        0x0 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(snprintf.c.obj)
+ .data          0x0000000000000000        0x0 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(snprintf.c.obj)
+ .bss           0x0000000000000000        0x0 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(snprintf.c.obj)
+ .text          0x0000000000000000        0x0 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(uart.c.obj)
+ .data          0x0000000000000000        0x0 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(uart.c.obj)
+ .bss           0x0000000000000000        0x0 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(uart.c.obj)
+ .text.uart_putc
+                0x0000000000000000       0x40 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(uart.c.obj)
+ .text.uart_getc
+                0x0000000000000000        0x8 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(uart.c.obj)
+ .text.uart_tstc
+                0x0000000000000000        0x8 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(uart.c.obj)
+ .text          0x0000000000000000        0x0 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(rtos_cmdqu.c.obj)
+ .data          0x0000000000000000        0x0 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(rtos_cmdqu.c.obj)
+ .bss           0x0000000000000000        0x0 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(rtos_cmdqu.c.obj)
+ .rodata.rtos_cmdqu_send.str1.8
+                0x0000000000000000       0x57 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(rtos_cmdqu.c.obj)
+ .text.rtos_cmdqu_send
+                0x0000000000000000      0x110 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(rtos_cmdqu.c.obj)
+ .text          0x0000000000000000        0x0 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(cvi_spinlock.c.obj)
+ .data          0x0000000000000000        0x0 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(cvi_spinlock.c.obj)
+ .bss           0x0000000000000000        0x0 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(cvi_spinlock.c.obj)
+ .text.cvi_spinlock_deinit
+                0x0000000000000000        0x2 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(cvi_spinlock.c.obj)
+ .text.spinlock_base
+                0x0000000000000000        0xa /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(cvi_spinlock.c.obj)
+ .text          0x0000000000000000        0x0 /home/work/Zephyr_pedestal/cvitek/install/lib/libhal.a(hal_uart_dw.c.obj)
+ .data          0x0000000000000000        0x0 /home/work/Zephyr_pedestal/cvitek/install/lib/libhal.a(hal_uart_dw.c.obj)
+ .bss           0x0000000000000000        0x0 /home/work/Zephyr_pedestal/cvitek/install/lib/libhal.a(hal_uart_dw.c.obj)
+ .text.hal_uart_getc
+                0x0000000000000000       0x16 /home/work/Zephyr_pedestal/cvitek/install/lib/libhal.a(hal_uart_dw.c.obj)
+ .text.hal_uart_tstc
+                0x0000000000000000        0xe /home/work/Zephyr_pedestal/cvitek/install/lib/libhal.a(hal_uart_dw.c.obj)
+ .data          0x0000000000000000        0x0 /home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/lib/rv64imafdc/lp64d/libc.a(lib_a-memcpy.o)
+ .bss           0x0000000000000000        0x0 /home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/lib/rv64imafdc/lp64d/libc.a(lib_a-memcpy.o)
+ .data          0x0000000000000000        0x0 /home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/lib/rv64imafdc/lp64d/libc.a(lib_a-memset.o)
+ .bss           0x0000000000000000        0x0 /home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/lib/rv64imafdc/lp64d/libc.a(lib_a-memset.o)
+ .text          0x0000000000000000        0x0 /home/work/Zephyr_pedestal/cvitek/install/lib/libcommon.a(sleep.c.obj)
+ .data          0x0000000000000000        0x0 /home/work/Zephyr_pedestal/cvitek/install/lib/libcommon.a(sleep.c.obj)
+ .bss           0x0000000000000000        0x0 /home/work/Zephyr_pedestal/cvitek/install/lib/libcommon.a(sleep.c.obj)
+ .text.nanosleep
+                0x0000000000000000        0x8 /home/work/Zephyr_pedestal/cvitek/install/lib/libcommon.a(sleep.c.obj)
+ .text          0x0000000000000000        0x0 /home/work/Zephyr_pedestal/cvitek/install/lib/libarch.a(arch_sleep.c.obj)
+ .data          0x0000000000000000        0x0 /home/work/Zephyr_pedestal/cvitek/install/lib/libarch.a(arch_sleep.c.obj)
+ .bss           0x0000000000000000        0x0 /home/work/Zephyr_pedestal/cvitek/install/lib/libarch.a(arch_sleep.c.obj)
+ .text.arch_nsleep
+                0x0000000000000000       0x10 /home/work/Zephyr_pedestal/cvitek/install/lib/libarch.a(arch_sleep.c.obj)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+psu_ddr_0_MEM_0  0x0000000083ffa000 0x0000000000005000
+sysstack         0x0000000083fff000 0x0000000000001000
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD main/CMakeFiles/cvirtos.elf.dir/src/main.c.obj
+LOAD main/CMakeFiles/cvirtos.elf.dir/src/trap.S.obj
+LOAD main/CMakeFiles/cvirtos.elf.dir/src/trap_handler.c.obj
+START GROUP
+LOAD comm/libcomm.a
+LOAD /home/work/Zephyr_pedestal/cvitek/install/lib/libarch.a
+LOAD /home/work/Zephyr_pedestal/cvitek/install/lib/libcomm.a
+LOAD /home/work/Zephyr_pedestal/cvitek/install/lib/libcommon.a
+LOAD /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a
+LOAD /home/work/Zephyr_pedestal/cvitek/install/lib/libhal.a
+LOAD /home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/lib/rv64imafdc/lp64d/libm.a
+LOAD /home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/lib/rv64imafdc/lp64d/libc.a
+LOAD /home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d/libgcc.a
+LOAD /home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/lib/rv64imafdc/lp64d/libsim.a
+END GROUP
+                0x0000000080200000                CONFIG_SYS_TEXT_BASE = 0x80200000
+                0x0000000000080000                CVIMMAP_ATF_SIZE = 0x80000
+                0x0000000083ffa000                CVIMMAP_BOOTLOGO_ADDR = 0x83ffa000
+                0x0000000000000000                CVIMMAP_BOOTLOGO_SIZE = 0x0
+                0x0000000082300000                CVIMMAP_CONFIG_SYS_INIT_SP_ADDR = 0x82300000
+                0x00000000813ffc00                CVIMMAP_CVI_UPDATE_HEADER_ADDR = 0x813ffc00
+                0x0000000000000400                CVIMMAP_CVI_UPDATE_HEADER_SIZE = 0x400
+                0x0000000080000000                CVIMMAP_DRAM_BASE = 0x80000000
+                0x0000000004000000                CVIMMAP_DRAM_SIZE = 0x4000000
+                0x0000000083ffa000                CVIMMAP_FREERTOS_ADDR = 0x83ffa000
+                0x0000000000000000                CVIMMAP_FREERTOS_RESERVED_ION_SIZE = 0x0
+                0x0000000000006000                CVIMMAP_FREERTOS_SIZE = 0x6000
+                0x0000000083ffa000                CVIMMAP_FSBL_C906L_START_ADDR = 0x83ffa000
+                0x0000000081400000                CVIMMAP_FSBL_UNZIP_ADDR = 0x81400000
+                0x0000000000f00000                CVIMMAP_FSBL_UNZIP_SIZE = 0xf00000
+                0x0000000083ffa000                CVIMMAP_H26X_BITSTREAM_ADDR = 0x83ffa000
+                0x0000000000000000                CVIMMAP_H26X_BITSTREAM_SIZE = 0x0
+                0x0000000083ffa000                CVIMMAP_H26X_ENC_BUFF_ADDR = 0x83ffa000
+                0x0000000000000000                CVIMMAP_H26X_ENC_BUFF_SIZE = 0x0
+                0x0000000083ffa000                CVIMMAP_ION_ADDR = 0x83ffa000
+                0x0000000000000000                CVIMMAP_ION_SIZE = 0x0
+                0x0000000083ffa000                CVIMMAP_ISP_MEM_BASE_ADDR = 0x83ffa000
+                0x0000000000000000                CVIMMAP_ISP_MEM_BASE_SIZE = 0x0
+                0x0000000080000000                CVIMMAP_KERNEL_MEMORY_ADDR = 0x80000000
+                0x0000000003ffa000                CVIMMAP_KERNEL_MEMORY_SIZE = 0x3ffa000
+                0x0000000080000000                CVIMMAP_MONITOR_ADDR = 0x80000000
+                0x0000000080080000                CVIMMAP_OPENSBI_FDT_ADDR = 0x80080000
+                0x0000000000080000                CVIMMAP_OPENSBI_SIZE = 0x80000
+                0x0000000081400000                CVIMMAP_UIMAG_ADDR = 0x81400000
+                0x0000000000f00000                CVIMMAP_UIMAG_SIZE = 0xf00000
+                0x0000000000001000                _STACK_SIZE = DEFINED (_STACK_SIZE)?_STACK_SIZE:0x1000
+
+.text           0x0000000083ffa000     0x1c12
+ *(.vectors)
+ .vectors       0x0000000083ffa000       0xb4 /home/work/Zephyr_pedestal/cvitek/install/lib/libarch.a(start.S.obj)
+                0x0000000083ffa000                _start
+ *(.text)
+ *fill*         0x0000000083ffa0b4        0xc 
+ .text          0x0000000083ffa0c0       0xae main/CMakeFiles/cvirtos.elf.dir/src/trap.S.obj
+                0x0000000083ffa0c0                rv_trap
+ .text          0x0000000083ffa16e       0x74 comm/libcomm.a(shutdown.S.obj)
+                0x0000000083ffa16e                uni_shutdown
+ *fill*         0x0000000083ffa1e2        0x2 
+ .text          0x0000000083ffa1e4       0xde /home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/lib/rv64imafdc/lp64d/libc.a(lib_a-memcpy.o)
+                0x0000000083ffa1e4                memcpy
+ *fill*         0x0000000083ffa2c2        0x2 
+ .text          0x0000000083ffa2c4       0xaa /home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/lib/rv64imafdc/lp64d/libc.a(lib_a-memset.o)
+                0x0000000083ffa2c4                memset
+ *(.text.*)
+ .text.startup.main
+                0x0000000083ffa36e      0x142 main/CMakeFiles/cvirtos.elf.dir/src/main.c.obj
+                0x0000000083ffa36e                main
+ .text.trap_entry
+                0x0000000083ffa4b0       0xf0 main/CMakeFiles/cvirtos.elf.dir/src/trap_handler.c.obj
+                0x0000000083ffa4b0                trap_entry
+ .text.send_test_cmdqu_irq_handler
+                0x0000000083ffa5a0       0x8e comm/libcomm.a(comm_main.c.obj)
+                0x0000000083ffa5a0                send_test_cmdqu_irq_handler
+ .text.boot_cmdqu_handler
+                0x0000000083ffa62e       0xee comm/libcomm.a(comm_main.c.obj)
+                0x0000000083ffa62e                boot_cmdqu_handler
+ .text.milkv_cpu_shut_prepare
+                0x0000000083ffa71c       0x70 comm/libcomm.a(comm_main.c.obj)
+                0x0000000083ffa71c                milkv_cpu_shut_prepare
+ .text.milkv_cpu_shutdown
+                0x0000000083ffa78c        0x2 comm/libcomm.a(comm_main.c.obj)
+                0x0000000083ffa78c                milkv_cpu_shutdown
+ .text.prvQueueISR
+                0x0000000083ffa78e       0x18 comm/libcomm.a(comm_main.c.obj)
+                0x0000000083ffa78e                prvQueueISR
+ .text.pre_boot_data_clear
+                0x0000000083ffa7a6       0x2e comm/libcomm.a(comm_main.c.obj)
+                0x0000000083ffa7a6                pre_boot_data_clear
+ .text.prvCmdQuRunTask
+                0x0000000083ffa7d4       0x68 comm/libcomm.a(comm_main.c.obj)
+                0x0000000083ffa7d4                prvCmdQuRunTask
+ .text.main_shutdown
+                0x0000000083ffa83c       0x9c comm/libcomm.a(comm_main.c.obj)
+                0x0000000083ffa83c                main_shutdown
+ .text.main_cvirtos
+                0x0000000083ffa8d8       0xa0 comm/libcomm.a(comm_main.c.obj)
+                0x0000000083ffa8d8                main_cvirtos
+ .text.plic_ack_irq
+                0x0000000083ffa978        0xe /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(system.c.obj)
+ .text.plic_eoi_irq
+                0x0000000083ffa986        0xc /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(system.c.obj)
+ .text.plic_set_priority_irq
+                0x0000000083ffa992       0x12 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(system.c.obj)
+ .text.plic_set_threshold
+                0x0000000083ffa9a4        0xc /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(system.c.obj)
+ .text.plic_unmask_irq
+                0x0000000083ffa9b0       0x46 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(system.c.obj)
+ .text.plic_mask_irq
+                0x0000000083ffa9f6       0x4c /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(system.c.obj)
+ .text.post_system_init
+                0x0000000083ffaa42        0xa /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(system.c.obj)
+                0x0000000083ffaa42                post_system_init
+ .text.disable_irq
+                0x0000000083ffaa4c        0x2 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(system.c.obj)
+                0x0000000083ffaa4c                disable_irq
+ .text.irq_init
+                0x0000000083ffaa4e       0x72 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(system.c.obj)
+                0x0000000083ffaa4e                irq_init
+ .text.pre_system_init
+                0x0000000083ffaac0       0x22 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(system.c.obj)
+                0x0000000083ffaac0                pre_system_init
+ .text.clear_irq
+                0x0000000083ffaae2       0x46 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(system.c.obj)
+                0x0000000083ffaae2                clear_irq
+ .text.request_irq
+                0x0000000083ffab28       0x94 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(system.c.obj)
+                0x0000000083ffab28                request_irq
+ .text.do_irq   0x0000000083ffabbc       0x7a /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(system.c.obj)
+                0x0000000083ffabbc                do_irq
+ .text.pinmux_init
+                0x0000000083ffac36        0x2 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(pinmux.c.obj)
+                0x0000000083ffac36                pinmux_init
+ .text.printf   0x0000000083ffac38       0x6c /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(printf.c.obj)
+                0x0000000083ffac38                printf
+ .text.vsnprintf
+                0x0000000083ffaca4      0x276 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(snprintf.c.obj)
+                0x0000000083ffaca4                vsnprintf
+ .text.snprintf
+                0x0000000083ffaf1a       0x20 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(snprintf.c.obj)
+                0x0000000083ffaf1a                snprintf
+ .text.uart_init
+                0x0000000083ffaf3a       0x5e /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(uart.c.obj)
+                0x0000000083ffaf3a                uart_init
+ .text.uart_puts
+                0x0000000083ffaf98       0x4a /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(uart.c.obj)
+                0x0000000083ffaf98                uart_puts
+ .text.uart_put_buff
+                0x0000000083ffafe2       0x4a /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(uart.c.obj)
+                0x0000000083ffafe2                uart_put_buff
+ .text.request_cmdqu_irq
+                0x0000000083ffb02c       0x2e /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(rtos_cmdqu.c.obj)
+                0x0000000083ffb02c                request_cmdqu_irq
+ .text.rtos_cmdqu_init
+                0x0000000083ffb05a       0x62 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(rtos_cmdqu.c.obj)
+                0x0000000083ffb05a                rtos_cmdqu_init
+ .text.cmdqu_intr
+                0x0000000083ffb0bc      0x288 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(rtos_cmdqu.c.obj)
+                0x0000000083ffb0bc                cmdqu_intr
+ .text.cvi_spinlock_init
+                0x0000000083ffb344       0x14 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(cvi_spinlock.c.obj)
+                0x0000000083ffb344                cvi_spinlock_init
+ .text.hw_spin_lock
+                0x0000000083ffb358       0xcc /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(cvi_spinlock.c.obj)
+                0x0000000083ffb358                hw_spin_lock
+ .text._hw_raw_spin_lock_irqsave
+                0x0000000083ffb424       0x66 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(cvi_spinlock.c.obj)
+                0x0000000083ffb424                _hw_raw_spin_lock_irqsave
+ .text._hw_raw_spin_unlock_irqrestore
+                0x0000000083ffb48a       0x6a /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(cvi_spinlock.c.obj)
+                0x0000000083ffb48a                _hw_raw_spin_unlock_irqrestore
+ .text.hal_uart_init
+                0x0000000083ffb4f4       0x8e /home/work/Zephyr_pedestal/cvitek/install/lib/libhal.a(hal_uart_dw.c.obj)
+                0x0000000083ffb4f4                hal_uart_init
+ .text.hal_uart_putc
+                0x0000000083ffb582       0x16 /home/work/Zephyr_pedestal/cvitek/install/lib/libhal.a(hal_uart_dw.c.obj)
+                0x0000000083ffb582                hal_uart_putc
+ .text.usleep   0x0000000083ffb598        0x2 /home/work/Zephyr_pedestal/cvitek/install/lib/libcommon.a(sleep.c.obj)
+                0x0000000083ffb598                usleep
+ .text.arch_usleep
+                0x0000000083ffb59a       0x1a /home/work/Zephyr_pedestal/cvitek/install/lib/libarch.a(arch_sleep.c.obj)
+                0x0000000083ffb59a                arch_usleep
+                0x0000000083ffb5b4                __rodata_start = .
+ *(.rodata)
+ *(.rodata.*)
+ *fill*         0x0000000083ffb5b4        0x4 
+ .rodata.main.str1.8
+                0x0000000083ffb5b8       0xa1 main/CMakeFiles/cvirtos.elf.dir/src/main.c.obj
+ *fill*         0x0000000083ffb659        0x7 
+ .rodata.trap_entry.str1.8
+                0x0000000083ffb660       0xa5 main/CMakeFiles/cvirtos.elf.dir/src/trap_handler.c.obj
+ *fill*         0x0000000083ffb705        0x3 
+ .rodata.send_test_cmdqu_irq_handler.str1.8
+                0x0000000083ffb708       0xfd comm/libcomm.a(comm_main.c.obj)
+ *fill*         0x0000000083ffb805        0x3 
+ .rodata.boot_cmdqu_handler.str1.8
+                0x0000000083ffb808       0x34 comm/libcomm.a(comm_main.c.obj)
+ *fill*         0x0000000083ffb83c        0x4 
+ .rodata.milkv_cpu_shut_prepare.str1.8
+                0x0000000083ffb840       0x1f comm/libcomm.a(comm_main.c.obj)
+ *fill*         0x0000000083ffb85f        0x1 
+ .rodata.prvQueueISR.str1.8
+                0x0000000083ffb860        0xd comm/libcomm.a(comm_main.c.obj)
+ *fill*         0x0000000083ffb86d        0x3 
+ .rodata.prvCmdQuRunTask.str1.8
+                0x0000000083ffb870       0x36 comm/libcomm.a(comm_main.c.obj)
+ *fill*         0x0000000083ffb8a6        0x2 
+ .rodata.main_shutdown.str1.8
+                0x0000000083ffb8a8       0x81 comm/libcomm.a(comm_main.c.obj)
+ *fill*         0x0000000083ffb929        0x7 
+ .rodata.main_cvirtos.str1.8
+                0x0000000083ffb930       0x11 comm/libcomm.a(comm_main.c.obj)
+ *fill*         0x0000000083ffb941        0x7 
+ .rodata.plic_unmask_irq.str1.8
+                0x0000000083ffb948       0x16 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(system.c.obj)
+ *fill*         0x0000000083ffb95e        0x2 
+ .rodata.plic_mask_irq.str1.8
+                0x0000000083ffb960       0x14 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(system.c.obj)
+ *fill*         0x0000000083ffb974        0x4 
+ .rodata.post_system_init.str1.8
+                0x0000000083ffb978       0x17 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(system.c.obj)
+ *fill*         0x0000000083ffb98f        0x1 
+ .rodata.pre_system_init.str1.8
+                0x0000000083ffb990       0x16 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(system.c.obj)
+ *fill*         0x0000000083ffb9a6        0x2 
+ .rodata.request_irq.str1.8
+                0x0000000083ffb9a8       0x2d /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(system.c.obj)
+ *fill*         0x0000000083ffb9d5        0x3 
+ .rodata.do_irq.str1.8
+                0x0000000083ffb9d8       0x26 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(system.c.obj)
+ *fill*         0x0000000083ffb9fe        0x2 
+ .rodata.printf.str1.8
+                0x0000000083ffba00       0x11 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(printf.c.obj)
+ *fill*         0x0000000083ffba11        0x3 
+ .rodata.vsnprintf
+                0x0000000083ffba14       0x58 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(snprintf.c.obj)
+ *fill*         0x0000000083ffba6c        0x4 
+ .rodata.uart_init.str1.8
+                0x0000000083ffba70       0x1b /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(uart.c.obj)
+ *fill*         0x0000000083ffba8b        0x5 
+ .rodata.rtos_cmdqu_init.str1.8
+                0x0000000083ffba90       0x17 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(rtos_cmdqu.c.obj)
+ *fill*         0x0000000083ffbaa7        0x1 
+ .rodata.cmdqu_intr.str1.8
+                0x0000000083ffbaa8       0xc7 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(rtos_cmdqu.c.obj)
+                                        0x156 (size before relaxing)
+ *fill*         0x0000000083ffbb6f        0x1 
+ .rodata.cvi_spinlock_init.str1.8
+                0x0000000083ffbb70        0xf /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(cvi_spinlock.c.obj)
+ *fill*         0x0000000083ffbb7f        0x1 
+ .rodata.hw_spin_lock.str1.8
+                0x0000000083ffbb80       0x18 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(cvi_spinlock.c.obj)
+ .rodata._hw_raw_spin_lock_irqsave.str1.8
+                0x0000000083ffbb98       0x30 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(cvi_spinlock.c.obj)
+ .rodata._hw_raw_spin_unlock_irqrestore.str1.8
+                0x0000000083ffbbc8       0x38 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(cvi_spinlock.c.obj)
+                                         0x32 (size before relaxing)
+ .rodata.__func__.0
+                0x0000000083ffbc00       0x12 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(cvi_spinlock.c.obj)
+ *(.srodata)
+ *(.srodata.*)
+                0x0000000083ffbc12                __rodata_end = .
+
+.rela.dyn       0x0000000083ffbc18        0x0
+ .rela.text.trap_entry
+                0x0000000083ffbc18        0x0 main/CMakeFiles/cvirtos.elf.dir/src/main.c.obj
+ .rela.text     0x0000000083ffbc18        0x0 main/CMakeFiles/cvirtos.elf.dir/src/main.c.obj
+ .rela.vectors  0x0000000083ffbc18        0x0 main/CMakeFiles/cvirtos.elf.dir/src/main.c.obj
+
+.data           0x0000000083ffbc18       0x50
+                0x0000000083ffbc20                . = ALIGN (0x10)
+ *fill*         0x0000000083ffbc18        0x8 
+                0x0000000083ffbc20                _data = .
+                0x0000000083ffbc20                __data_start = .
+ *(.sdata)
+ *(.sdata.*)
+ .sdata.boot_state
+                0x0000000083ffbc20        0x4 comm/libcomm.a(comm_main.c.obj)
+                0x0000000083ffbc20                boot_state
+ *fill*         0x0000000083ffbc24        0x4 
+ .sdata.mailbox_lock
+                0x0000000083ffbc28        0x4 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(rtos_cmdqu.c.obj)
+                0x0000000083ffbc28                mailbox_lock
+ *fill*         0x0000000083ffbc2c        0x4 
+ .sdata.reg_base
+                0x0000000083ffbc30        0x8 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(cvi_spinlock.c.obj)
+ *(.data)
+ *(.data.*)
+ .data._data_test
+                0x0000000083ffbc38       0x1c main/CMakeFiles/cvirtos.elf.dir/src/main.c.obj
+                0x0000000083ffbc38                _data_test
+ *fill*         0x0000000083ffbc54        0x4 
+ .data.milkvduo_func
+                0x0000000083ffbc58       0x10 comm/libcomm.a(comm_main.c.obj)
+                0x0000000083ffbc58                milkvduo_func
+                0x0000000083ffbc68                __data_end = .
+                0x0000000083ffbc68                _edata = .
+
+.bss            0x0000000083ffbc68     0x1ca0
+                0x0000000083ffbc70                . = ALIGN (0x10)
+ *fill*         0x0000000083ffbc68        0x8 
+                0x0000000083ffbc70                __bss_start__ = .
+                0x0000000083ffbc70                _bss = .
+ *(.bss)
+ *(.bss.*)
+ .bss._bss_test
+                0x0000000083ffbc70       0x5c main/CMakeFiles/cvirtos.elf.dir/src/main.c.obj
+                0x0000000083ffbc70                _bss_test
+ *fill*         0x0000000083ffbccc        0x4 
+ .bss.g_irq_action
+                0x0000000083ffbcd0     0x1400 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(system.c.obj)
+ .bss.g_cmd_handler
+                0x0000000083ffd0d0      0x400 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(rtos_cmdqu.c.obj)
+ .bss.g_private_data
+                0x0000000083ffd4d0      0x400 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(rtos_cmdqu.c.obj)
+ *(.sbss)
+ *(.sbss.*)
+ .sbss.boot_addr
+                0x0000000083ffd8d0        0x8 comm/libcomm.a(comm_main.c.obj)
+                0x0000000083ffd8d0                boot_addr
+ .sbss.last_package_id
+                0x0000000083ffd8d8        0x1 comm/libcomm.a(comm_main.c.obj)
+                0x0000000083ffd8d8                last_package_id
+ *fill*         0x0000000083ffd8d9        0x3 
+ .sbss.message_id.0
+                0x0000000083ffd8dc        0x4 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(printf.c.obj)
+ .sbss.mailbox_context
+                0x0000000083ffd8e0        0x8 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(rtos_cmdqu.c.obj)
+                0x0000000083ffd8e0                mailbox_context
+ .sbss.mbox_done_reg
+                0x0000000083ffd8e8        0x8 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(rtos_cmdqu.c.obj)
+                0x0000000083ffd8e8                mbox_done_reg
+ .sbss.mbox_reg
+                0x0000000083ffd8f0        0x8 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(rtos_cmdqu.c.obj)
+                0x0000000083ffd8f0                mbox_reg
+ .sbss.lockCount
+                0x0000000083ffd8f8        0x8 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(cvi_spinlock.c.obj)
+ .sbss.uart     0x0000000083ffd900        0x8 /home/work/Zephyr_pedestal/cvitek/install/lib/libhal.a(hal_uart_dw.c.obj)
+                0x0000000083ffd908                _ebss = .
+                0x0000000083ffd908                __bss_end__ = .
+                0x0000000083ffbc18                _data_lma = LOADADDR (.data)
+
+.stack          0x0000000083fff000     0x1000
+                0x0000000083fff000                . = ALIGN (0x10)
+                0x0000000083fff000                _stack_end_end = .
+                0x0000000084000000                . = (. + _STACK_SIZE)
+ *fill*         0x0000000083fff000     0x1000 
+                0x0000000084000000                _stack_top = .
+                0x0000000084000000                _end = .
+OUTPUT(main/cvirtos.elf elf64-littleriscv)
+
+.debug_info     0x0000000000000000     0x38d2
+ .debug_info    0x0000000000000000      0x201 main/CMakeFiles/cvirtos.elf.dir/src/main.c.obj
+ .debug_info    0x0000000000000201       0x2e main/CMakeFiles/cvirtos.elf.dir/src/trap.S.obj
+ .debug_info    0x000000000000022f      0x2c1 main/CMakeFiles/cvirtos.elf.dir/src/trap_handler.c.obj
+ .debug_info    0x00000000000004f0      0xa40 comm/libcomm.a(comm_main.c.obj)
+ .debug_info    0x0000000000000f30       0x2e comm/libcomm.a(shutdown.S.obj)
+ .debug_info    0x0000000000000f5e       0x2e /home/work/Zephyr_pedestal/cvitek/install/lib/libarch.a(start.S.obj)
+ .debug_info    0x0000000000000f8c      0xb43 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(system.c.obj)
+ .debug_info    0x0000000000001acf       0x98 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(pinmux.c.obj)
+ .debug_info    0x0000000000001b67      0x1f8 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(printf.c.obj)
+ .debug_info    0x0000000000001d5f      0x2d0 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(snprintf.c.obj)
+ .debug_info    0x000000000000202f      0x44b /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(uart.c.obj)
+ .debug_info    0x000000000000247a      0xa0f /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(rtos_cmdqu.c.obj)
+ .debug_info    0x0000000000002e89      0x5b3 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(cvi_spinlock.c.obj)
+ .debug_info    0x000000000000343c      0x223 /home/work/Zephyr_pedestal/cvitek/install/lib/libhal.a(hal_uart_dw.c.obj)
+ .debug_info    0x000000000000365f       0xd1 /home/work/Zephyr_pedestal/cvitek/install/lib/libcommon.a(sleep.c.obj)
+ .debug_info    0x0000000000003730      0x1a2 /home/work/Zephyr_pedestal/cvitek/install/lib/libarch.a(arch_sleep.c.obj)
+
+.debug_abbrev   0x0000000000000000     0x12e4
+ .debug_abbrev  0x0000000000000000       0xd8 main/CMakeFiles/cvirtos.elf.dir/src/main.c.obj
+ .debug_abbrev  0x00000000000000d8       0x14 main/CMakeFiles/cvirtos.elf.dir/src/trap.S.obj
+ .debug_abbrev  0x00000000000000ec       0xe5 main/CMakeFiles/cvirtos.elf.dir/src/trap_handler.c.obj
+ .debug_abbrev  0x00000000000001d1      0x23b comm/libcomm.a(comm_main.c.obj)
+ .debug_abbrev  0x000000000000040c       0x14 comm/libcomm.a(shutdown.S.obj)
+ .debug_abbrev  0x0000000000000420       0x14 /home/work/Zephyr_pedestal/cvitek/install/lib/libarch.a(start.S.obj)
+ .debug_abbrev  0x0000000000000434      0x2f9 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(system.c.obj)
+ .debug_abbrev  0x000000000000072d       0x44 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(pinmux.c.obj)
+ .debug_abbrev  0x0000000000000771      0x128 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(printf.c.obj)
+ .debug_abbrev  0x0000000000000899       0xfa /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(snprintf.c.obj)
+ .debug_abbrev  0x0000000000000993      0x1da /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(uart.c.obj)
+ .debug_abbrev  0x0000000000000b6d      0x26a /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(rtos_cmdqu.c.obj)
+ .debug_abbrev  0x0000000000000dd7      0x29a /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(cvi_spinlock.c.obj)
+ .debug_abbrev  0x0000000000001071      0x130 /home/work/Zephyr_pedestal/cvitek/install/lib/libhal.a(hal_uart_dw.c.obj)
+ .debug_abbrev  0x00000000000011a1       0x79 /home/work/Zephyr_pedestal/cvitek/install/lib/libcommon.a(sleep.c.obj)
+ .debug_abbrev  0x000000000000121a       0xca /home/work/Zephyr_pedestal/cvitek/install/lib/libarch.a(arch_sleep.c.obj)
+
+.debug_loc      0x0000000000000000     0x2a9d
+ .debug_loc     0x0000000000000000      0x198 main/CMakeFiles/cvirtos.elf.dir/src/main.c.obj
+ .debug_loc     0x0000000000000198      0x243 main/CMakeFiles/cvirtos.elf.dir/src/trap_handler.c.obj
+ .debug_loc     0x00000000000003db      0x4da comm/libcomm.a(comm_main.c.obj)
+ .debug_loc     0x00000000000008b5      0x8bc /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(system.c.obj)
+ .debug_loc     0x0000000000001171       0xb5 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(printf.c.obj)
+ .debug_loc     0x0000000000001226      0x983 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(snprintf.c.obj)
+ .debug_loc     0x0000000000001ba9      0x2ac /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(uart.c.obj)
+ .debug_loc     0x0000000000001e55      0x560 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(rtos_cmdqu.c.obj)
+ .debug_loc     0x00000000000023b5      0x411 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(cvi_spinlock.c.obj)
+ .debug_loc     0x00000000000027c6       0xfa /home/work/Zephyr_pedestal/cvitek/install/lib/libhal.a(hal_uart_dw.c.obj)
+ .debug_loc     0x00000000000028c0       0x72 /home/work/Zephyr_pedestal/cvitek/install/lib/libcommon.a(sleep.c.obj)
+ .debug_loc     0x0000000000002932      0x16b /home/work/Zephyr_pedestal/cvitek/install/lib/libarch.a(arch_sleep.c.obj)
+
+.debug_aranges  0x0000000000000000      0x580
+ .debug_aranges
+                0x0000000000000000       0x30 main/CMakeFiles/cvirtos.elf.dir/src/main.c.obj
+ .debug_aranges
+                0x0000000000000030       0x30 main/CMakeFiles/cvirtos.elf.dir/src/trap.S.obj
+ .debug_aranges
+                0x0000000000000060       0x30 main/CMakeFiles/cvirtos.elf.dir/src/trap_handler.c.obj
+ .debug_aranges
+                0x0000000000000090       0xb0 comm/libcomm.a(comm_main.c.obj)
+ .debug_aranges
+                0x0000000000000140       0x30 comm/libcomm.a(shutdown.S.obj)
+ .debug_aranges
+                0x0000000000000170       0x30 /home/work/Zephyr_pedestal/cvitek/install/lib/libarch.a(start.S.obj)
+ .debug_aranges
+                0x00000000000001a0      0x100 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(system.c.obj)
+ .debug_aranges
+                0x00000000000002a0       0x30 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(pinmux.c.obj)
+ .debug_aranges
+                0x00000000000002d0       0x30 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(printf.c.obj)
+ .debug_aranges
+                0x0000000000000300       0x40 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(snprintf.c.obj)
+ .debug_aranges
+                0x0000000000000340       0x80 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(uart.c.obj)
+ .debug_aranges
+                0x00000000000003c0       0x60 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(rtos_cmdqu.c.obj)
+ .debug_aranges
+                0x0000000000000420       0x80 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(cvi_spinlock.c.obj)
+ .debug_aranges
+                0x00000000000004a0       0x60 /home/work/Zephyr_pedestal/cvitek/install/lib/libhal.a(hal_uart_dw.c.obj)
+ .debug_aranges
+                0x0000000000000500       0x40 /home/work/Zephyr_pedestal/cvitek/install/lib/libcommon.a(sleep.c.obj)
+ .debug_aranges
+                0x0000000000000540       0x40 /home/work/Zephyr_pedestal/cvitek/install/lib/libarch.a(arch_sleep.c.obj)
+
+.debug_ranges   0x0000000000000000      0xa00
+ .debug_ranges  0x0000000000000000       0x50 main/CMakeFiles/cvirtos.elf.dir/src/main.c.obj
+ .debug_ranges  0x0000000000000050       0x20 main/CMakeFiles/cvirtos.elf.dir/src/trap_handler.c.obj
+ .debug_ranges  0x0000000000000070       0xd0 comm/libcomm.a(comm_main.c.obj)
+ .debug_ranges  0x0000000000000140      0x1f0 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(system.c.obj)
+ .debug_ranges  0x0000000000000330       0x20 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(pinmux.c.obj)
+ .debug_ranges  0x0000000000000350       0x20 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(printf.c.obj)
+ .debug_ranges  0x0000000000000370      0x220 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(snprintf.c.obj)
+ .debug_ranges  0x0000000000000590      0x190 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(uart.c.obj)
+ .debug_ranges  0x0000000000000720      0x110 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(rtos_cmdqu.c.obj)
+ .debug_ranges  0x0000000000000830      0x120 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(cvi_spinlock.c.obj)
+ .debug_ranges  0x0000000000000950       0x50 /home/work/Zephyr_pedestal/cvitek/install/lib/libhal.a(hal_uart_dw.c.obj)
+ .debug_ranges  0x00000000000009a0       0x30 /home/work/Zephyr_pedestal/cvitek/install/lib/libcommon.a(sleep.c.obj)
+ .debug_ranges  0x00000000000009d0       0x30 /home/work/Zephyr_pedestal/cvitek/install/lib/libarch.a(arch_sleep.c.obj)
+
+.debug_line     0x0000000000000000     0x4b9e
+ .debug_line    0x0000000000000000      0x2ff main/CMakeFiles/cvirtos.elf.dir/src/main.c.obj
+ .debug_line    0x00000000000002ff      0x219 main/CMakeFiles/cvirtos.elf.dir/src/trap.S.obj
+ .debug_line    0x0000000000000518      0x33f main/CMakeFiles/cvirtos.elf.dir/src/trap_handler.c.obj
+ .debug_line    0x0000000000000857      0xb57 comm/libcomm.a(comm_main.c.obj)
+ .debug_line    0x00000000000013ae      0x16d comm/libcomm.a(shutdown.S.obj)
+ .debug_line    0x000000000000151b      0x1d1 /home/work/Zephyr_pedestal/cvitek/install/lib/libarch.a(start.S.obj)
+ .debug_line    0x00000000000016ec      0xb77 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(system.c.obj)
+ .debug_line    0x0000000000002263       0x77 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(pinmux.c.obj)
+ .debug_line    0x00000000000022da      0x206 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(printf.c.obj)
+ .debug_line    0x00000000000024e0      0x8df /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(snprintf.c.obj)
+ .debug_line    0x0000000000002dbf      0x500 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(uart.c.obj)
+ .debug_line    0x00000000000032bf      0xb2e /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(rtos_cmdqu.c.obj)
+ .debug_line    0x0000000000003ded      0x6bc /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(cvi_spinlock.c.obj)
+ .debug_line    0x00000000000044a9      0x407 /home/work/Zephyr_pedestal/cvitek/install/lib/libhal.a(hal_uart_dw.c.obj)
+ .debug_line    0x00000000000048b0       0xdc /home/work/Zephyr_pedestal/cvitek/install/lib/libcommon.a(sleep.c.obj)
+ .debug_line    0x000000000000498c      0x212 /home/work/Zephyr_pedestal/cvitek/install/lib/libarch.a(arch_sleep.c.obj)
+
+.debug_str      0x0000000000000000      0xf90
+ .debug_str     0x0000000000000000      0x1d6 main/CMakeFiles/cvirtos.elf.dir/src/main.c.obj
+                                        0x1f8 (size before relaxing)
+ .debug_str     0x00000000000001d6       0x43 main/CMakeFiles/cvirtos.elf.dir/src/trap.S.obj
+                                         0x70 (size before relaxing)
+ .debug_str     0x0000000000000219       0xbc main/CMakeFiles/cvirtos.elf.dir/src/trap_handler.c.obj
+                                        0x246 (size before relaxing)
+ .debug_str     0x00000000000002d5      0x286 comm/libcomm.a(comm_main.c.obj)
+                                        0x4aa (size before relaxing)
+ .debug_str     0x000000000000055b       0x43 comm/libcomm.a(shutdown.S.obj)
+                                         0x7c (size before relaxing)
+ .debug_str     0x000000000000059e       0x68 /home/work/Zephyr_pedestal/cvitek/install/lib/libarch.a(start.S.obj)
+                                         0x74 (size before relaxing)
+ .debug_str     0x0000000000000606      0x1b0 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(system.c.obj)
+                                        0x407 (size before relaxing)
+ .debug_str     0x00000000000007b6       0x3d /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(pinmux.c.obj)
+                                        0x206 (size before relaxing)
+ .debug_str     0x00000000000007f3       0x95 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(printf.c.obj)
+                                        0x239 (size before relaxing)
+ .debug_str     0x0000000000000888       0x6c /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(snprintf.c.obj)
+                                        0x265 (size before relaxing)
+ .debug_str     0x00000000000008f4       0xb0 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(uart.c.obj)
+                                        0x290 (size before relaxing)
+ .debug_str     0x00000000000009a4      0x364 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(rtos_cmdqu.c.obj)
+                                        0x680 (size before relaxing)
+ .debug_str     0x0000000000000d08       0xf6 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(cvi_spinlock.c.obj)
+                                        0x394 (size before relaxing)
+ .debug_str     0x0000000000000dfe       0x95 /home/work/Zephyr_pedestal/cvitek/install/lib/libhal.a(hal_uart_dw.c.obj)
+                                        0x285 (size before relaxing)
+ .debug_str     0x0000000000000e93       0xa0 /home/work/Zephyr_pedestal/cvitek/install/lib/libcommon.a(sleep.c.obj)
+                                        0x1b2 (size before relaxing)
+ .debug_str     0x0000000000000f33       0x5d /home/work/Zephyr_pedestal/cvitek/install/lib/libarch.a(arch_sleep.c.obj)
+                                        0x1d3 (size before relaxing)
+
+.comment        0x0000000000000000       0x2f
+ .comment       0x0000000000000000       0x1d main/CMakeFiles/cvirtos.elf.dir/src/main.c.obj
+                                         0x1e (size before relaxing)
+ .comment       0x000000000000001d       0x1e main/CMakeFiles/cvirtos.elf.dir/src/trap_handler.c.obj
+ .comment       0x000000000000001d       0x1e comm/libcomm.a(comm_main.c.obj)
+ .comment       0x000000000000001d       0x1e /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(system.c.obj)
+ .comment       0x000000000000001d       0x1e /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(pinmux.c.obj)
+ .comment       0x000000000000001d       0x1e /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(printf.c.obj)
+ .comment       0x000000000000001d       0x1e /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(snprintf.c.obj)
+ .comment       0x000000000000001d       0x1e /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(uart.c.obj)
+ .comment       0x000000000000001d       0x1e /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(rtos_cmdqu.c.obj)
+ .comment       0x000000000000001d       0x1e /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(cvi_spinlock.c.obj)
+ .comment       0x000000000000001d       0x1e /home/work/Zephyr_pedestal/cvitek/install/lib/libhal.a(hal_uart_dw.c.obj)
+ .comment       0x000000000000001d       0x12 /home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/lib/rv64imafdc/lp64d/libc.a(lib_a-memcpy.o)
+                                         0x13 (size before relaxing)
+ .comment       0x000000000000002f       0x1e /home/work/Zephyr_pedestal/cvitek/install/lib/libcommon.a(sleep.c.obj)
+ .comment       0x000000000000002f       0x1e /home/work/Zephyr_pedestal/cvitek/install/lib/libarch.a(arch_sleep.c.obj)
+
+.riscv.attributes
+                0x0000000000000000       0x35
+ .riscv.attributes
+                0x0000000000000000       0x35 main/CMakeFiles/cvirtos.elf.dir/src/main.c.obj
+ .riscv.attributes
+                0x0000000000000035       0x33 main/CMakeFiles/cvirtos.elf.dir/src/trap.S.obj
+ .riscv.attributes
+                0x0000000000000068       0x35 main/CMakeFiles/cvirtos.elf.dir/src/trap_handler.c.obj
+ .riscv.attributes
+                0x000000000000009d       0x35 comm/libcomm.a(comm_main.c.obj)
+ .riscv.attributes
+                0x00000000000000d2       0x33 comm/libcomm.a(shutdown.S.obj)
+ .riscv.attributes
+                0x0000000000000105       0x33 /home/work/Zephyr_pedestal/cvitek/install/lib/libarch.a(start.S.obj)
+ .riscv.attributes
+                0x0000000000000138       0x35 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(system.c.obj)
+ .riscv.attributes
+                0x000000000000016d       0x35 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(pinmux.c.obj)
+ .riscv.attributes
+                0x00000000000001a2       0x35 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(printf.c.obj)
+ .riscv.attributes
+                0x00000000000001d7       0x35 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(snprintf.c.obj)
+ .riscv.attributes
+                0x000000000000020c       0x35 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(uart.c.obj)
+ .riscv.attributes
+                0x0000000000000241       0x35 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(rtos_cmdqu.c.obj)
+ .riscv.attributes
+                0x0000000000000276       0x35 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(cvi_spinlock.c.obj)
+ .riscv.attributes
+                0x00000000000002ab       0x35 /home/work/Zephyr_pedestal/cvitek/install/lib/libhal.a(hal_uart_dw.c.obj)
+ .riscv.attributes
+                0x00000000000002e0       0x35 /home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/lib/rv64imafdc/lp64d/libc.a(lib_a-memcpy.o)
+ .riscv.attributes
+                0x0000000000000315       0x33 /home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/lib/rv64imafdc/lp64d/libc.a(lib_a-memset.o)
+ .riscv.attributes
+                0x0000000000000348       0x35 /home/work/Zephyr_pedestal/cvitek/install/lib/libcommon.a(sleep.c.obj)
+ .riscv.attributes
+                0x000000000000037d       0x35 /home/work/Zephyr_pedestal/cvitek/install/lib/libarch.a(arch_sleep.c.obj)
+
+.debug_frame    0x0000000000000000      0x8c0
+ .debug_frame   0x0000000000000000       0x30 main/CMakeFiles/cvirtos.elf.dir/src/main.c.obj
+ .debug_frame   0x0000000000000030       0x50 main/CMakeFiles/cvirtos.elf.dir/src/trap_handler.c.obj
+ .debug_frame   0x0000000000000080      0x180 comm/libcomm.a(comm_main.c.obj)
+ .debug_frame   0x0000000000000200      0x1e8 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(system.c.obj)
+ .debug_frame   0x00000000000003e8       0x28 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(pinmux.c.obj)
+ .debug_frame   0x0000000000000410       0x40 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(printf.c.obj)
+ .debug_frame   0x0000000000000450       0x88 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(snprintf.c.obj)
+ .debug_frame   0x00000000000004d8      0x110 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(uart.c.obj)
+ .debug_frame   0x00000000000005e8      0x100 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(rtos_cmdqu.c.obj)
+ .debug_frame   0x00000000000006e8       0xe8 /home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a(cvi_spinlock.c.obj)
+ .debug_frame   0x00000000000007d0       0x70 /home/work/Zephyr_pedestal/cvitek/install/lib/libhal.a(hal_uart_dw.c.obj)
+ .debug_frame   0x0000000000000840       0x40 /home/work/Zephyr_pedestal/cvitek/install/lib/libcommon.a(sleep.c.obj)
+ .debug_frame   0x0000000000000880       0x40 /home/work/Zephyr_pedestal/cvitek/install/lib/libarch.a(arch_sleep.c.obj)

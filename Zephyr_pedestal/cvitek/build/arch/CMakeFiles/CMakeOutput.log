@@ -1,0 +1,184 @@
+The target system is: Generic -  - riscv64
+The host system is: Linux - 6.9.9-100.fc39.x86_64 - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /home/work/host-tools/gcc/riscv64-elf-x86_64/bin/riscv64-unknown-elf-gcc 
+Build flags: ;-O2;-std=gnu11;-march=rv64imafdc;-mabi=lp64d;-ffunction-sections;-fdata-sections;-Wl,--gc-sections;-Wno-pointer-to-int-cast;-fno-builtin;-Wno-missing-field-initializers;-g;-Wall;-Wextra;-nostdlib;-mcmodel=medany;-DFREERTOS_BSP;-DLINUX_BSP_64MB;-D__riscv_xlen=64;-DTHEAD_C906;-DCONFIG_64BIT;-DRISCV_FPU;-O2;-std=gnu11;-march=rv64imafdc;-mabi=lp64d;-ffunction-sections;-fdata-sections;-Wl,--gc-sections;-Wno-pointer-to-int-cast;-fno-builtin;-Wno-missing-field-initializers;-g;-Wall;-Wextra;-nostdlib;-mcmodel=medany;-DFREERTOS_BSP;-DLINUX_BSP_64MB;-D__riscv_xlen=64;-DTHEAD_C906;-DCONFIG_64BIT;-DRISCV_FPU
+Id flags:  
+
+The output was:
+0
+/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/bin/ld: warning: cannot find entry symbol _start; not setting start address
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /home/work/host-tools/gcc/riscv64-elf-x86_64/bin/riscv64-unknown-elf-gcc 
+Build flags: ;-O2;-std=gnu11;-march=rv64imafdc;-mabi=lp64d;-ffunction-sections;-fdata-sections;-Wl,--gc-sections;-Wno-pointer-to-int-cast;-fno-builtin;-Wno-missing-field-initializers;-g;-Wall;-Wextra;-nostdlib;-mcmodel=medany;-DFREERTOS_BSP;-DLINUX_BSP_64MB;-D__riscv_xlen=64;-DTHEAD_C906;-DCONFIG_64BIT;-DRISCV_FPU;-O2;-std=gnu11;-march=rv64imafdc;-mabi=lp64d;-ffunction-sections;-fdata-sections;-Wl,--gc-sections;-Wno-pointer-to-int-cast;-fno-builtin;-Wno-missing-field-initializers;-g;-Wall;-Wextra;-nostdlib;-mcmodel=medany;-DFREERTOS_BSP;-DLINUX_BSP_64MB;-D__riscv_xlen=64;-DTHEAD_C906;-DCONFIG_64BIT;-DRISCV_FPU
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+
+The C compiler identification is GNU, found in "/home/work/Zephyr_pedestal/cvitek/build/arch/CMakeFiles/3.22.1/CompilerIdC/CMakeCCompilerId.o"
+
+Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+riscv64-unknown-elf-gcc (V2.0.3.0-xialf) 10.2.0
+Copyright (C) 2020 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/work/Zephyr_pedestal/cvitek/build/arch/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_c6643 && [1/2] Building C object CMakeFiles/cmTC_c6643.dir/CMakeCCompilerABI.c.obj
+Using built-in specs.
+COLLECT_GCC=/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/riscv64-unknown-elf-gcc
+Target: riscv64-unknown-elf
+Configured with: /ldhome/software/toolsbuild/slave2/workspace/Toolchain/release-riscv-0/./source/riscv/riscv-gcc/configure --target=riscv64-unknown-elf --with-gmp=/ldhome/software/toolsbuild/slave2/workspace/Toolchain/release-riscv-0/build-riscv-gcc-riscv64-unknown-elf/build-riscv64-elf-x86_64/lib-for-gcc-x86_64-linux --with-mpfr=/ldhome/software/toolsbuild/slave2/workspace/Toolchain/release-riscv-0/build-riscv-gcc-riscv64-unknown-elf/build-riscv64-elf-x86_64/lib-for-gcc-x86_64-linux --with-mpc=/ldhome/software/toolsbuild/slave2/workspace/Toolchain/release-riscv-0/build-riscv-gcc-riscv64-unknown-elf/build-riscv64-elf-x86_64/lib-for-gcc-x86_64-linux --with-libexpat-prefix=/ldhome/software/toolsbuild/slave2/workspace/Toolchain/release-riscv-0/build-riscv-gcc-riscv64-unknown-elf/build-riscv64-elf-x86_64/lib-for-gcc-x86_64-linux --with-pkgversion=V2.0.3.0-xialf --enable-libgcctf --prefix=/ldhome/software/toolsbuild/slave2/workspace/Toolchain/release-riscv-0/build-riscv-gcc-riscv64-unknown-elf/riscv64-elf-x86_64 --disable-shared --disable-threads --enable-languages=c,c++ --with-system-zlib --enable-tls --with-newlib --with-sysroot=/ldhome/software/toolsbuild/slave2/workspace/Toolchain/release-riscv-0/build-riscv-gcc-riscv64-unknown-elf/riscv64-elf-x86_64/riscv64-unknown-elf --with-native-system-header-dir=/include --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libgomp --disable-nls --disable-tm-clone-registry --src=/ldhome/software/toolsbuild/slave2/workspace/Toolchain/release-riscv-0/./source/riscv/riscv-gcc --enable-multilib --with-abi=lp64d --with-arch=rv64gcxthead 'CFLAGS_FOR_TARGET=-Os   -mcmodel=medany' 'CXXFLAGS_FOR_TARGET=-Os   -mcmodel=medany'
+Thread model: single
+Supported LTO compression algorithms: zlib
+gcc version 10.2.0 (V2.0.3.0-xialf) 
+COLLECT_GCC_OPTIONS='-O2' '-std=gnu11' '-march=rv64imafdc' '-mabi=lp64d' '-g' '-nostdlib' '-mcmodel=medany' '-D' 'FREERTOS_BSP' '-D' 'LINUX_BSP_64MB' '-D' '__riscv_xlen=64' '-D' 'THEAD_C906' '-D' 'CONFIG_64BIT' '-D' 'RISCV_FPU' '-O2' '-std=gnu11' '-march=rv64imafdc' '-mabi=lp64d' '-ffunction-sections' '-fdata-sections' '-Wno-pointer-to-int-cast' '-fno-builtin' '-Wno-missing-field-initializers' '-g' '-Wall' '-Wextra' '-nostdlib' '-mcmodel=medany' '-D' 'FREERTOS_BSP' '-D' 'LINUX_BSP_64MB' '-D' '__riscv_xlen=64' '-D' 'THEAD_C906' '-D' 'CONFIG_64BIT' '-D' 'RISCV_FPU' '-v' '-o' 'CMakeFiles/cmTC_c6643.dir/CMakeCCompilerABI.c.obj' '-c' '-march=rv64imafdc' '-march=rv64imafdc'
+ /home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../libexec/gcc/riscv64-unknown-elf/10.2.0/cc1 -quiet -v -imultilib rv64imafdc/lp64d -iprefix /home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/ -isysroot /home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../riscv64-unknown-elf -D FREERTOS_BSP -D LINUX_BSP_64MB -D __riscv_xlen=64 -D THEAD_C906 -D CONFIG_64BIT -D RISCV_FPU -D FREERTOS_BSP -D LINUX_BSP_64MB -D __riscv_xlen=64 -D THEAD_C906 -D CONFIG_64BIT -D RISCV_FPU /usr/share/cmake-3.22/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -march=rv64imafdc -mabi=lp64d -mcmodel=medany -march=rv64imafdc -mabi=lp64d -mcmodel=medany -march=rv64imafdc -march=rv64imafdc -auxbase-strip CMakeFiles/cmTC_c6643.dir/CMakeCCompilerABI.c.obj -g -g -O2 -O2 -Wno-pointer-to-int-cast -Wno-missing-field-initializers -Wall -Wextra -std=gnu11 -std=gnu11 -version -ffunction-sections -fdata-sections -fno-builtin -o /tmp/ccA16Y9Y.s
+GNU C11 (V2.0.3.0-xialf) version 10.2.0 (riscv64-unknown-elf)
+	compiled by GNU C version 6.4.0, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version none
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring duplicate directory "/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/../../lib/gcc/riscv64-unknown-elf/10.2.0/include"
+ignoring nonexistent directory "/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../riscv64-unknown-elf/usr/local/include"
+ignoring duplicate directory "/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/../../lib/gcc/riscv64-unknown-elf/10.2.0/include-fixed"
+ignoring duplicate directory "/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/../../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/include"
+ignoring duplicate directory "/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../riscv64-unknown-elf/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/include
+ /home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/include-fixed
+ /home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/include
+End of search list.
+GNU C11 (V2.0.3.0-xialf) version 10.2.0 (riscv64-unknown-elf)
+	compiled by GNU C version 6.4.0, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version none
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 35e4292ea16d2231bac8d992238e0f20
+COLLECT_GCC_OPTIONS='-O2' '-std=gnu11' '-march=rv64imafdc' '-mabi=lp64d' '-g' '-nostdlib' '-mcmodel=medany' '-D' 'FREERTOS_BSP' '-D' 'LINUX_BSP_64MB' '-D' '__riscv_xlen=64' '-D' 'THEAD_C906' '-D' 'CONFIG_64BIT' '-D' 'RISCV_FPU' '-O2' '-std=gnu11' '-march=rv64imafdc' '-mabi=lp64d' '-ffunction-sections' '-fdata-sections' '-Wno-pointer-to-int-cast' '-fno-builtin' '-Wno-missing-field-initializers' '-g' '-Wall' '-Wextra' '-nostdlib' '-mcmodel=medany' '-D' 'FREERTOS_BSP' '-D' 'LINUX_BSP_64MB' '-D' '__riscv_xlen=64' '-D' 'THEAD_C906' '-D' 'CONFIG_64BIT' '-D' 'RISCV_FPU' '-v' '-o' 'CMakeFiles/cmTC_c6643.dir/CMakeCCompilerABI.c.obj' '-c' '-march=rv64imafdc' '-march=rv64imafdc'
+ /home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/bin/as -v --traditional-format -march=rv64imafdc -march=rv64imafdc -march=rv64imafdc -march=rv64imafdc -mabi=lp64d -mabi=lp64d -o CMakeFiles/cmTC_c6643.dir/CMakeCCompilerABI.c.obj /tmp/ccA16Y9Y.s
+GNU assembler version 2.32 (riscv64-unknown-elf) using BFD version (GNU Binutils) 2.32
+COMPILER_PATH=/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../libexec/gcc/riscv64-unknown-elf/10.2.0/:/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../libexec/gcc/:/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/bin/
+LIBRARY_PATH=/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d/:/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/lib/rv64imafdc/lp64d/:/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../riscv64-unknown-elf/lib/rv64imafdc/lp64d/:/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/:/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/:/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/lib/:/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../riscv64-unknown-elf/lib/
+COLLECT_GCC_OPTIONS='-O2' '-std=gnu11' '-march=rv64imafdc' '-mabi=lp64d' '-g' '-nostdlib' '-mcmodel=medany' '-D' 'FREERTOS_BSP' '-D' 'LINUX_BSP_64MB' '-D' '__riscv_xlen=64' '-D' 'THEAD_C906' '-D' 'CONFIG_64BIT' '-D' 'RISCV_FPU' '-O2' '-std=gnu11' '-march=rv64imafdc' '-mabi=lp64d' '-ffunction-sections' '-fdata-sections' '-Wno-pointer-to-int-cast' '-fno-builtin' '-Wno-missing-field-initializers' '-g' '-Wall' '-Wextra' '-nostdlib' '-mcmodel=medany' '-D' 'FREERTOS_BSP' '-D' 'LINUX_BSP_64MB' '-D' '__riscv_xlen=64' '-D' 'THEAD_C906' '-D' 'CONFIG_64BIT' '-D' 'RISCV_FPU' '-v' '-o' 'CMakeFiles/cmTC_c6643.dir/CMakeCCompilerABI.c.obj' '-c' '-march=rv64imafdc' '-march=rv64imafdc'
+[2/2] Linking C executable cmTC_c6643
+Using built-in specs.
+COLLECT_GCC=/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/riscv64-unknown-elf-gcc
+COLLECT_LTO_WRAPPER=/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../libexec/gcc/riscv64-unknown-elf/10.2.0/lto-wrapper
+Target: riscv64-unknown-elf
+Configured with: /ldhome/software/toolsbuild/slave2/workspace/Toolchain/release-riscv-0/./source/riscv/riscv-gcc/configure --target=riscv64-unknown-elf --with-gmp=/ldhome/software/toolsbuild/slave2/workspace/Toolchain/release-riscv-0/build-riscv-gcc-riscv64-unknown-elf/build-riscv64-elf-x86_64/lib-for-gcc-x86_64-linux --with-mpfr=/ldhome/software/toolsbuild/slave2/workspace/Toolchain/release-riscv-0/build-riscv-gcc-riscv64-unknown-elf/build-riscv64-elf-x86_64/lib-for-gcc-x86_64-linux --with-mpc=/ldhome/software/toolsbuild/slave2/workspace/Toolchain/release-riscv-0/build-riscv-gcc-riscv64-unknown-elf/build-riscv64-elf-x86_64/lib-for-gcc-x86_64-linux --with-libexpat-prefix=/ldhome/software/toolsbuild/slave2/workspace/Toolchain/release-riscv-0/build-riscv-gcc-riscv64-unknown-elf/build-riscv64-elf-x86_64/lib-for-gcc-x86_64-linux --with-pkgversion=V2.0.3.0-xialf --enable-libgcctf --prefix=/ldhome/software/toolsbuild/slave2/workspace/Toolchain/release-riscv-0/build-riscv-gcc-riscv64-unknown-elf/riscv64-elf-x86_64 --disable-shared --disable-threads --enable-languages=c,c++ --with-system-zlib --enable-tls --with-newlib --with-sysroot=/ldhome/software/toolsbuild/slave2/workspace/Toolchain/release-riscv-0/build-riscv-gcc-riscv64-unknown-elf/riscv64-elf-x86_64/riscv64-unknown-elf --with-native-system-header-dir=/include --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libgomp --disable-nls --disable-tm-clone-registry --src=/ldhome/software/toolsbuild/slave2/workspace/Toolchain/release-riscv-0/./source/riscv/riscv-gcc --enable-multilib --with-abi=lp64d --with-arch=rv64gcxthead 'CFLAGS_FOR_TARGET=-Os   -mcmodel=medany' 'CXXFLAGS_FOR_TARGET=-Os   -mcmodel=medany'
+Thread model: single
+Supported LTO compression algorithms: zlib
+gcc version 10.2.0 (V2.0.3.0-xialf) 
+COMPILER_PATH=/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../libexec/gcc/riscv64-unknown-elf/10.2.0/:/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../libexec/gcc/:/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/bin/
+LIBRARY_PATH=/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d/:/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/lib/rv64imafdc/lp64d/:/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../riscv64-unknown-elf/lib/rv64imafdc/lp64d/:/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/:/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/:/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/lib/:/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../riscv64-unknown-elf/lib/
+COLLECT_GCC_OPTIONS='-O2' '-std=gnu11' '-march=rv64imafdc' '-mabi=lp64d' '-g' '-nostdlib' '-mcmodel=medany' '-D' 'FREERTOS_BSP' '-D' 'LINUX_BSP_64MB' '-D' '__riscv_xlen=64' '-D' 'THEAD_C906' '-D' 'CONFIG_64BIT' '-D' 'RISCV_FPU' '-O2' '-std=gnu11' '-march=rv64imafdc' '-mabi=lp64d' '-ffunction-sections' '-fdata-sections' '-Wno-pointer-to-int-cast' '-fno-builtin' '-Wno-missing-field-initializers' '-g' '-Wall' '-Wextra' '-nostdlib' '-mcmodel=medany' '-D' 'FREERTOS_BSP' '-D' 'LINUX_BSP_64MB' '-D' '__riscv_xlen=64' '-D' 'THEAD_C906' '-D' 'CONFIG_64BIT' '-D' 'RISCV_FPU' '-v' '-o' 'cmTC_c6643' '-march=rv64imafdc' '-march=rv64imafdc'
+ /home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../libexec/gcc/riscv64-unknown-elf/10.2.0/collect2 -plugin /home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../libexec/gcc/riscv64-unknown-elf/10.2.0/liblto_plugin.so -plugin-opt=/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../libexec/gcc/riscv64-unknown-elf/10.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccSUFEQ1.res --sysroot=/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../riscv64-unknown-elf -melf64lriscv -o cmTC_c6643 -L/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d -L/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/lib/rv64imafdc/lp64d -L/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../riscv64-unknown-elf/lib/rv64imafdc/lp64d -L/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0 -L/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc -L/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/lib -L/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../riscv64-unknown-elf/lib --gc-sections --gc-sections CMakeFiles/cmTC_c6643.dir/CMakeCCompilerABI.c.obj
+/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/bin/ld: warning: cannot find entry symbol _start; not setting start address
+COLLECT_GCC_OPTIONS='-O2' '-std=gnu11' '-march=rv64imafdc' '-mabi=lp64d' '-g' '-nostdlib' '-mcmodel=medany' '-D' 'FREERTOS_BSP' '-D' 'LINUX_BSP_64MB' '-D' '__riscv_xlen=64' '-D' 'THEAD_C906' '-D' 'CONFIG_64BIT' '-D' 'RISCV_FPU' '-O2' '-std=gnu11' '-march=rv64imafdc' '-mabi=lp64d' '-ffunction-sections' '-fdata-sections' '-Wno-pointer-to-int-cast' '-fno-builtin' '-Wno-missing-field-initializers' '-g' '-Wall' '-Wextra' '-nostdlib' '-mcmodel=medany' '-D' 'FREERTOS_BSP' '-D' 'LINUX_BSP_64MB' '-D' '__riscv_xlen=64' '-D' 'THEAD_C906' '-D' 'CONFIG_64BIT' '-D' 'RISCV_FPU' '-v' '-o' 'cmTC_c6643' '-march=rv64imafdc' '-march=rv64imafdc'
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/include]
+    add: [/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/include-fixed]
+    add: [/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/include]
+  end of search list found
+  collapse include dir [/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/include] ==> [/home/work/host-tools/gcc/riscv64-elf-x86_64/lib/gcc/riscv64-unknown-elf/10.2.0/include]
+  collapse include dir [/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/include-fixed] ==> [/home/work/host-tools/gcc/riscv64-elf-x86_64/lib/gcc/riscv64-unknown-elf/10.2.0/include-fixed]
+  collapse include dir [/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/include] ==> [/home/work/host-tools/gcc/riscv64-elf-x86_64/riscv64-unknown-elf/include]
+  implicit include dirs: [/home/work/host-tools/gcc/riscv64-elf-x86_64/lib/gcc/riscv64-unknown-elf/10.2.0/include;/home/work/host-tools/gcc/riscv64-elf-x86_64/lib/gcc/riscv64-unknown-elf/10.2.0/include-fixed;/home/work/host-tools/gcc/riscv64-elf-x86_64/riscv64-unknown-elf/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(riscv64-unknown-elf-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/work/Zephyr_pedestal/cvitek/build/arch/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/ninja cmTC_c6643 && [1/2] Building C object CMakeFiles/cmTC_c6643.dir/CMakeCCompilerABI.c.obj]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/riscv64-unknown-elf-gcc]
+  ignore line: [Target: riscv64-unknown-elf]
+  ignore line: [Configured with: /ldhome/software/toolsbuild/slave2/workspace/Toolchain/release-riscv-0/./source/riscv/riscv-gcc/configure --target=riscv64-unknown-elf --with-gmp=/ldhome/software/toolsbuild/slave2/workspace/Toolchain/release-riscv-0/build-riscv-gcc-riscv64-unknown-elf/build-riscv64-elf-x86_64/lib-for-gcc-x86_64-linux --with-mpfr=/ldhome/software/toolsbuild/slave2/workspace/Toolchain/release-riscv-0/build-riscv-gcc-riscv64-unknown-elf/build-riscv64-elf-x86_64/lib-for-gcc-x86_64-linux --with-mpc=/ldhome/software/toolsbuild/slave2/workspace/Toolchain/release-riscv-0/build-riscv-gcc-riscv64-unknown-elf/build-riscv64-elf-x86_64/lib-for-gcc-x86_64-linux --with-libexpat-prefix=/ldhome/software/toolsbuild/slave2/workspace/Toolchain/release-riscv-0/build-riscv-gcc-riscv64-unknown-elf/build-riscv64-elf-x86_64/lib-for-gcc-x86_64-linux --with-pkgversion=V2.0.3.0-xialf --enable-libgcctf --prefix=/ldhome/software/toolsbuild/slave2/workspace/Toolchain/release-riscv-0/build-riscv-gcc-riscv64-unknown-elf/riscv64-elf-x86_64 --disable-shared --disable-threads --enable-languages=c c++ --with-system-zlib --enable-tls --with-newlib --with-sysroot=/ldhome/software/toolsbuild/slave2/workspace/Toolchain/release-riscv-0/build-riscv-gcc-riscv64-unknown-elf/riscv64-elf-x86_64/riscv64-unknown-elf --with-native-system-header-dir=/include --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libgomp --disable-nls --disable-tm-clone-registry --src=/ldhome/software/toolsbuild/slave2/workspace/Toolchain/release-riscv-0/./source/riscv/riscv-gcc --enable-multilib --with-abi=lp64d --with-arch=rv64gcxthead 'CFLAGS_FOR_TARGET=-Os   -mcmodel=medany' 'CXXFLAGS_FOR_TARGET=-Os   -mcmodel=medany']
+  ignore line: [Thread model: single]
+  ignore line: [Supported LTO compression algorithms: zlib]
+  ignore line: [gcc version 10.2.0 (V2.0.3.0-xialf) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-O2' '-std=gnu11' '-march=rv64imafdc' '-mabi=lp64d' '-g' '-nostdlib' '-mcmodel=medany' '-D' 'FREERTOS_BSP' '-D' 'LINUX_BSP_64MB' '-D' '__riscv_xlen=64' '-D' 'THEAD_C906' '-D' 'CONFIG_64BIT' '-D' 'RISCV_FPU' '-O2' '-std=gnu11' '-march=rv64imafdc' '-mabi=lp64d' '-ffunction-sections' '-fdata-sections' '-Wno-pointer-to-int-cast' '-fno-builtin' '-Wno-missing-field-initializers' '-g' '-Wall' '-Wextra' '-nostdlib' '-mcmodel=medany' '-D' 'FREERTOS_BSP' '-D' 'LINUX_BSP_64MB' '-D' '__riscv_xlen=64' '-D' 'THEAD_C906' '-D' 'CONFIG_64BIT' '-D' 'RISCV_FPU' '-v' '-o' 'CMakeFiles/cmTC_c6643.dir/CMakeCCompilerABI.c.obj' '-c' '-march=rv64imafdc' '-march=rv64imafdc']
+  ignore line: [ /home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../libexec/gcc/riscv64-unknown-elf/10.2.0/cc1 -quiet -v -imultilib rv64imafdc/lp64d -iprefix /home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/ -isysroot /home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../riscv64-unknown-elf -D FREERTOS_BSP -D LINUX_BSP_64MB -D __riscv_xlen=64 -D THEAD_C906 -D CONFIG_64BIT -D RISCV_FPU -D FREERTOS_BSP -D LINUX_BSP_64MB -D __riscv_xlen=64 -D THEAD_C906 -D CONFIG_64BIT -D RISCV_FPU /usr/share/cmake-3.22/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -march=rv64imafdc -mabi=lp64d -mcmodel=medany -march=rv64imafdc -mabi=lp64d -mcmodel=medany -march=rv64imafdc -march=rv64imafdc -auxbase-strip CMakeFiles/cmTC_c6643.dir/CMakeCCompilerABI.c.obj -g -g -O2 -O2 -Wno-pointer-to-int-cast -Wno-missing-field-initializers -Wall -Wextra -std=gnu11 -std=gnu11 -version -ffunction-sections -fdata-sections -fno-builtin -o /tmp/ccA16Y9Y.s]
+  ignore line: [GNU C11 (V2.0.3.0-xialf) version 10.2.0 (riscv64-unknown-elf)]
+  ignore line: [	compiled by GNU C version 6.4.0  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version none]
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring duplicate directory "/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/../../lib/gcc/riscv64-unknown-elf/10.2.0/include"]
+  ignore line: [ignoring nonexistent directory "/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../riscv64-unknown-elf/usr/local/include"]
+  ignore line: [ignoring duplicate directory "/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/../../lib/gcc/riscv64-unknown-elf/10.2.0/include-fixed"]
+  ignore line: [ignoring duplicate directory "/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/../../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/include"]
+  ignore line: [ignoring duplicate directory "/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../riscv64-unknown-elf/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/include]
+  ignore line: [ /home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/include-fixed]
+  ignore line: [ /home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C11 (V2.0.3.0-xialf) version 10.2.0 (riscv64-unknown-elf)]
+  ignore line: [	compiled by GNU C version 6.4.0  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version none]
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: 35e4292ea16d2231bac8d992238e0f20]
+  ignore line: [COLLECT_GCC_OPTIONS='-O2' '-std=gnu11' '-march=rv64imafdc' '-mabi=lp64d' '-g' '-nostdlib' '-mcmodel=medany' '-D' 'FREERTOS_BSP' '-D' 'LINUX_BSP_64MB' '-D' '__riscv_xlen=64' '-D' 'THEAD_C906' '-D' 'CONFIG_64BIT' '-D' 'RISCV_FPU' '-O2' '-std=gnu11' '-march=rv64imafdc' '-mabi=lp64d' '-ffunction-sections' '-fdata-sections' '-Wno-pointer-to-int-cast' '-fno-builtin' '-Wno-missing-field-initializers' '-g' '-Wall' '-Wextra' '-nostdlib' '-mcmodel=medany' '-D' 'FREERTOS_BSP' '-D' 'LINUX_BSP_64MB' '-D' '__riscv_xlen=64' '-D' 'THEAD_C906' '-D' 'CONFIG_64BIT' '-D' 'RISCV_FPU' '-v' '-o' 'CMakeFiles/cmTC_c6643.dir/CMakeCCompilerABI.c.obj' '-c' '-march=rv64imafdc' '-march=rv64imafdc']
+  ignore line: [ /home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/bin/as -v --traditional-format -march=rv64imafdc -march=rv64imafdc -march=rv64imafdc -march=rv64imafdc -mabi=lp64d -mabi=lp64d -o CMakeFiles/cmTC_c6643.dir/CMakeCCompilerABI.c.obj /tmp/ccA16Y9Y.s]
+  ignore line: [GNU assembler version 2.32 (riscv64-unknown-elf) using BFD version (GNU Binutils) 2.32]
+  ignore line: [COMPILER_PATH=/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../libexec/gcc/riscv64-unknown-elf/10.2.0/:/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../libexec/gcc/:/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/bin/]
+  ignore line: [LIBRARY_PATH=/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d/:/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/lib/rv64imafdc/lp64d/:/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../riscv64-unknown-elf/lib/rv64imafdc/lp64d/:/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/:/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/:/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/lib/:/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../riscv64-unknown-elf/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-O2' '-std=gnu11' '-march=rv64imafdc' '-mabi=lp64d' '-g' '-nostdlib' '-mcmodel=medany' '-D' 'FREERTOS_BSP' '-D' 'LINUX_BSP_64MB' '-D' '__riscv_xlen=64' '-D' 'THEAD_C906' '-D' 'CONFIG_64BIT' '-D' 'RISCV_FPU' '-O2' '-std=gnu11' '-march=rv64imafdc' '-mabi=lp64d' '-ffunction-sections' '-fdata-sections' '-Wno-pointer-to-int-cast' '-fno-builtin' '-Wno-missing-field-initializers' '-g' '-Wall' '-Wextra' '-nostdlib' '-mcmodel=medany' '-D' 'FREERTOS_BSP' '-D' 'LINUX_BSP_64MB' '-D' '__riscv_xlen=64' '-D' 'THEAD_C906' '-D' 'CONFIG_64BIT' '-D' 'RISCV_FPU' '-v' '-o' 'CMakeFiles/cmTC_c6643.dir/CMakeCCompilerABI.c.obj' '-c' '-march=rv64imafdc' '-march=rv64imafdc']
+  ignore line: [[2/2] Linking C executable cmTC_c6643]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/riscv64-unknown-elf-gcc]
+  ignore line: [COLLECT_LTO_WRAPPER=/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../libexec/gcc/riscv64-unknown-elf/10.2.0/lto-wrapper]
+  ignore line: [Target: riscv64-unknown-elf]
+  ignore line: [Configured with: /ldhome/software/toolsbuild/slave2/workspace/Toolchain/release-riscv-0/./source/riscv/riscv-gcc/configure --target=riscv64-unknown-elf --with-gmp=/ldhome/software/toolsbuild/slave2/workspace/Toolchain/release-riscv-0/build-riscv-gcc-riscv64-unknown-elf/build-riscv64-elf-x86_64/lib-for-gcc-x86_64-linux --with-mpfr=/ldhome/software/toolsbuild/slave2/workspace/Toolchain/release-riscv-0/build-riscv-gcc-riscv64-unknown-elf/build-riscv64-elf-x86_64/lib-for-gcc-x86_64-linux --with-mpc=/ldhome/software/toolsbuild/slave2/workspace/Toolchain/release-riscv-0/build-riscv-gcc-riscv64-unknown-elf/build-riscv64-elf-x86_64/lib-for-gcc-x86_64-linux --with-libexpat-prefix=/ldhome/software/toolsbuild/slave2/workspace/Toolchain/release-riscv-0/build-riscv-gcc-riscv64-unknown-elf/build-riscv64-elf-x86_64/lib-for-gcc-x86_64-linux --with-pkgversion=V2.0.3.0-xialf --enable-libgcctf --prefix=/ldhome/software/toolsbuild/slave2/workspace/Toolchain/release-riscv-0/build-riscv-gcc-riscv64-unknown-elf/riscv64-elf-x86_64 --disable-shared --disable-threads --enable-languages=c c++ --with-system-zlib --enable-tls --with-newlib --with-sysroot=/ldhome/software/toolsbuild/slave2/workspace/Toolchain/release-riscv-0/build-riscv-gcc-riscv64-unknown-elf/riscv64-elf-x86_64/riscv64-unknown-elf --with-native-system-header-dir=/include --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libgomp --disable-nls --disable-tm-clone-registry --src=/ldhome/software/toolsbuild/slave2/workspace/Toolchain/release-riscv-0/./source/riscv/riscv-gcc --enable-multilib --with-abi=lp64d --with-arch=rv64gcxthead 'CFLAGS_FOR_TARGET=-Os   -mcmodel=medany' 'CXXFLAGS_FOR_TARGET=-Os   -mcmodel=medany']
+  ignore line: [Thread model: single]
+  ignore line: [Supported LTO compression algorithms: zlib]
+  ignore line: [gcc version 10.2.0 (V2.0.3.0-xialf) ]
+  ignore line: [COMPILER_PATH=/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../libexec/gcc/riscv64-unknown-elf/10.2.0/:/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../libexec/gcc/:/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/bin/]
+  ignore line: [LIBRARY_PATH=/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d/:/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/lib/rv64imafdc/lp64d/:/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../riscv64-unknown-elf/lib/rv64imafdc/lp64d/:/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/:/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/:/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/lib/:/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../riscv64-unknown-elf/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-O2' '-std=gnu11' '-march=rv64imafdc' '-mabi=lp64d' '-g' '-nostdlib' '-mcmodel=medany' '-D' 'FREERTOS_BSP' '-D' 'LINUX_BSP_64MB' '-D' '__riscv_xlen=64' '-D' 'THEAD_C906' '-D' 'CONFIG_64BIT' '-D' 'RISCV_FPU' '-O2' '-std=gnu11' '-march=rv64imafdc' '-mabi=lp64d' '-ffunction-sections' '-fdata-sections' '-Wno-pointer-to-int-cast' '-fno-builtin' '-Wno-missing-field-initializers' '-g' '-Wall' '-Wextra' '-nostdlib' '-mcmodel=medany' '-D' 'FREERTOS_BSP' '-D' 'LINUX_BSP_64MB' '-D' '__riscv_xlen=64' '-D' 'THEAD_C906' '-D' 'CONFIG_64BIT' '-D' 'RISCV_FPU' '-v' '-o' 'cmTC_c6643' '-march=rv64imafdc' '-march=rv64imafdc']
+  link line: [ /home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../libexec/gcc/riscv64-unknown-elf/10.2.0/collect2 -plugin /home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../libexec/gcc/riscv64-unknown-elf/10.2.0/liblto_plugin.so -plugin-opt=/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../libexec/gcc/riscv64-unknown-elf/10.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccSUFEQ1.res --sysroot=/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../riscv64-unknown-elf -melf64lriscv -o cmTC_c6643 -L/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d -L/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/lib/rv64imafdc/lp64d -L/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../riscv64-unknown-elf/lib/rv64imafdc/lp64d -L/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0 -L/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc -L/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/lib -L/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../riscv64-unknown-elf/lib --gc-sections --gc-sections CMakeFiles/cmTC_c6643.dir/CMakeCCompilerABI.c.obj]
+    arg [/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../libexec/gcc/riscv64-unknown-elf/10.2.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../libexec/gcc/riscv64-unknown-elf/10.2.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../libexec/gcc/riscv64-unknown-elf/10.2.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccSUFEQ1.res] ==> ignore
+    arg [--sysroot=/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../riscv64-unknown-elf] ==> ignore
+    arg [-melf64lriscv] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_c6643] ==> ignore
+    arg [-L/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d] ==> dir [/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d]
+    arg [-L/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/lib/rv64imafdc/lp64d] ==> dir [/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/lib/rv64imafdc/lp64d]
+    arg [-L/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../riscv64-unknown-elf/lib/rv64imafdc/lp64d] ==> dir [/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../riscv64-unknown-elf/lib/rv64imafdc/lp64d]
+    arg [-L/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0] ==> dir [/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0]
+    arg [-L/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc] ==> dir [/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc]
+    arg [-L/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/lib] ==> dir [/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/lib]
+    arg [-L/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../riscv64-unknown-elf/lib] ==> dir [/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../riscv64-unknown-elf/lib]
+    arg [--gc-sections] ==> ignore
+    arg [--gc-sections] ==> ignore
+    arg [CMakeFiles/cmTC_c6643.dir/CMakeCCompilerABI.c.obj] ==> ignore
+  collapse library dir [/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d] ==> [/home/work/host-tools/gcc/riscv64-elf-x86_64/lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d]
+  collapse library dir [/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/lib/rv64imafdc/lp64d] ==> [/home/work/host-tools/gcc/riscv64-elf-x86_64/riscv64-unknown-elf/lib/rv64imafdc/lp64d]
+  collapse library dir [/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../riscv64-unknown-elf/lib/rv64imafdc/lp64d] ==> [/home/work/host-tools/gcc/riscv64-elf-x86_64/riscv64-unknown-elf/lib/rv64imafdc/lp64d]
+  collapse library dir [/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0] ==> [/home/work/host-tools/gcc/riscv64-elf-x86_64/lib/gcc/riscv64-unknown-elf/10.2.0]
+  collapse library dir [/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc] ==> [/home/work/host-tools/gcc/riscv64-elf-x86_64/lib/gcc]
+  collapse library dir [/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/lib] ==> [/home/work/host-tools/gcc/riscv64-elf-x86_64/riscv64-unknown-elf/lib]
+  collapse library dir [/home/work/host-tools/gcc/riscv64-elf-x86_64/bin/../riscv64-unknown-elf/lib] ==> [/home/work/host-tools/gcc/riscv64-elf-x86_64/riscv64-unknown-elf/lib]
+  implicit libs: []
+  implicit objs: []
+  implicit dirs: [/home/work/host-tools/gcc/riscv64-elf-x86_64/lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d;/home/work/host-tools/gcc/riscv64-elf-x86_64/riscv64-unknown-elf/lib/rv64imafdc/lp64d;/home/work/host-tools/gcc/riscv64-elf-x86_64/lib/gcc/riscv64-unknown-elf/10.2.0;/home/work/host-tools/gcc/riscv64-elf-x86_64/lib/gcc;/home/work/host-tools/gcc/riscv64-elf-x86_64/riscv64-unknown-elf/lib]
+  implicit fwks: []
+
+

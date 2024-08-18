@@ -1,0 +1,3 @@
+/home/work/Zephyr_pedestal/cvitek/install/lib/libcomm.a
+/home/work/Zephyr_pedestal/cvitek/install/bin/cvirtos.elf
+/home/work/Zephyr_pedestal/cvitek/install/bin/cvirtos.map

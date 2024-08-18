@@ -1,0 +1,11 @@
+/home/work/Zephyr_pedestal/cvitek/install/include/hal/uart/hal_uart_dw.h
+/home/work/Zephyr_pedestal/cvitek/install/include/hal/pinmux/hal_pinmux.h
+/home/work/Zephyr_pedestal/cvitek/install/include/hal/config/cv180x_pinlist_swconfig.h
+/home/work/Zephyr_pedestal/cvitek/install/include/hal/config/cv180x_pinmux.h
+/home/work/Zephyr_pedestal/cvitek/install/include/hal/config/cv180x_reg_fmux_gpio.h
+/home/work/Zephyr_pedestal/cvitek/install/include/hal/config/intr_conf.h
+/home/work/Zephyr_pedestal/cvitek/install/include/hal/config/memmap.h
+/home/work/Zephyr_pedestal/cvitek/install/include/hal/config/pinctrl.h
+/home/work/Zephyr_pedestal/cvitek/install/include/hal/config/reg.h
+/home/work/Zephyr_pedestal/cvitek/install/include/hal/config/top_reg.h
+/home/work/Zephyr_pedestal/cvitek/install/lib/libhal.a

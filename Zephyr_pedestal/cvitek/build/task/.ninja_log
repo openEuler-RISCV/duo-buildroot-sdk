@@ -1,0 +1,11 @@
+# ninja log v5
+0	16	1723974996038414738	comm/CMakeFiles/comm.dir/src/riscv64/shutdown.S.obj	88b3d67a87fcd87c
+1	16	1723974996038414738	main/CMakeFiles/cvirtos.elf.dir/src/trap.S.obj	5a2e4e08c8483f7
+0	25	1723974996046414282	comm/CMakeFiles/comm.dir/src/riscv64/milkv_duo_io.c.obj	71d1e0af5869589b
+1	29	1723974996050414053	main/CMakeFiles/cvirtos.elf.dir/src/trap_handler.c.obj	4d1cffaa5793e4d7
+1	31	1723974996052413939	main/CMakeFiles/cvirtos.elf.dir/src/main.c.obj	9020abe8c86c4f8a
+0	57	1723974996078412455	comm/CMakeFiles/comm.dir/src/riscv64/comm_main.c.obj	249c0002310ad4e3
+57	70	1723974996092411656	comm/libcomm.a	23d8f70fe983fbda
+70	92	1723974996113410458	main/cvirtos.elf	d9752815f4f01f2e
+92	102	0	CMakeFiles/install.util	e82c5e03ccad8e10
+1	13	0	CMakeFiles/cvirtos.bin.util	a68f5d3fdddf0d44

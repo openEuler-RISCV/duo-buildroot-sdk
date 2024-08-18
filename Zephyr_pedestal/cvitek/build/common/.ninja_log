@@ -1,0 +1,7 @@
+# ninja log v5
+1	22	1723974995154465192	CMakeFiles/common.dir/src/riscv64/riscv_optimized/memcpy.S.obj	8d46f9ebed396814
+1	23	1723974995154465192	CMakeFiles/common.dir/src/riscv64/riscv_optimized/memset.S.obj	a6655eff5eb72bfa
+1	35	1723974995165464563	CMakeFiles/common.dir/src/riscv64/sleep.c.obj	dea5f451ff38ebf2
+0	36	1723974995167464450	CMakeFiles/common.dir/src/riscv64/memset.c.obj	f0141d7c89d9c29f
+37	51	1723974995183463536	libcommon.a	8430004225370148
+51	64	0	CMakeFiles/install.util	c42266e21fc06124

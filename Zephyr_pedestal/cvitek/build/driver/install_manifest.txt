@@ -1,0 +1,7 @@
+/home/work/Zephyr_pedestal/cvitek/install/include/driver/pinmux/pinmux.h
+/home/work/Zephyr_pedestal/cvitek/install/include/driver/uart/printf.h
+/home/work/Zephyr_pedestal/cvitek/install/include/driver/uart/uart.h
+/home/work/Zephyr_pedestal/cvitek/install/include/driver/spinlock/cvi_spinlock.h
+/home/work/Zephyr_pedestal/cvitek/install/include/driver/gpio/gpio.h
+/home/work/Zephyr_pedestal/cvitek/install/include/driver/rtos_cmdqu/rtos_cmdqu.h
+/home/work/Zephyr_pedestal/cvitek/install/lib/libdriver.a

@@ -1,0 +1,6 @@
+# ninja log v5
+0	33	1723974995488446129	CMakeFiles/hal.dir/dummy.c.obj	f861157ea6fd0884
+0	44	1723974995499445501	uart/CMakeFiles/haluart.dir/src/hal_uart_dw.c.obj	85562b96acb881fb
+1	47	1723974995502445330	pinmux/CMakeFiles/halpinmux.dir/src/hal_pinmux.c.obj	25bb6f78a42ecf0e
+47	60	1723974995516444531	libhal.a	bb726b596e8a6411
+60	69	0	CMakeFiles/install.util	3145d5cb04d9fd56

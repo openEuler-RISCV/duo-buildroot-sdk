@@ -1,0 +1,12 @@
+/home/work/Zephyr_pedestal/cvitek/install/lib/libarch.a
+/home/work/Zephyr_pedestal/cvitek/install/include/arch/arch_cpu.h
+/home/work/Zephyr_pedestal/cvitek/install/include/arch/arch_helpers.h
+/home/work/Zephyr_pedestal/cvitek/install/include/arch/arch_sleep.h
+/home/work/Zephyr_pedestal/cvitek/install/include/arch/arch_time.h
+/home/work/Zephyr_pedestal/cvitek/install/include/arch/core_rv64.h
+/home/work/Zephyr_pedestal/cvitek/install/include/arch/csi_core.h
+/home/work/Zephyr_pedestal/cvitek/install/include/arch/csi_rv64_gcc.h
+/home/work/Zephyr_pedestal/cvitek/install/include/arch/csr.h
+/home/work/Zephyr_pedestal/cvitek/install/include/arch/io.h
+/home/work/Zephyr_pedestal/cvitek/install/include/arch/irq.h
+/home/work/Zephyr_pedestal/cvitek/install/include/arch/ptrace.h

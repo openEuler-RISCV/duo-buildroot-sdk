@@ -1,0 +1,15 @@
+# ninja log v5
+1	31	1723974995748431290	uart/CMakeFiles/uart.dir/src/printf.c.obj	9d889ff692fdd12b
+0	31	1723974995749431233	CMakeFiles/driver.dir/dummy.c.obj	c606c75912e267
+1	36	1723974995754430947	uart/CMakeFiles/uart.dir/src/putchar.c.obj	5559d7833249ad99
+3	36	1723974995754430947	gpio/CMakeFiles/gpio.dir/src/gpio.c.obj	4ed3bca3405cb5f
+1	38	1723974995756430833	pinmux/CMakeFiles/pinmux.dir/src/pinmux.c.obj	465a8766c94fbb77
+2	39	1723974995756430833	uart/CMakeFiles/uart.dir/src/puts.c.obj	a76d26f32841dd81
+2	42	1723974995759430662	uart/CMakeFiles/uart.dir/src/uart.c.obj	e197efbb0ff8e148
+2	42	1723974995759430662	uart/CMakeFiles/uart.dir/src/strncpy.c.obj	85fbe9187ef011c2
+2	57	1723974995774429806	spinlock/CMakeFiles/spinlock.dir/src/cvi_spinlock.c.obj	8b3897730cb176ba
+2	64	1723974995781429406	uart/CMakeFiles/uart.dir/src/snprintf.c.obj	bebbe3783b8acc8b
+3	65	1723974995782429349	rtos_cmdqu/CMakeFiles/rtos_cmdqu.dir/src/rtos_cmdqu.c.obj	7806b7d6d5af751
+1	68	1723974995785429178	common/CMakeFiles/common.dir/src/system.c.obj	4d39154f0f8b863d
+68	84	1723974995801428265	libdriver.a	a1c394e3e584df2e
+84	94	0	CMakeFiles/install.util	c16dbbbee6c75a57
